@@ -16,7 +16,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Shin Myo Myat\"\nand Thado Dhamma Yaza II in 1552, and her brother Sithu was appointed governor of Pagan (Bagan) in 1551. Shin Myo Myat Shin Myo Myat (, ; c. 1490s \u2013 c. 1520s) was the mother of King Bayinnaung of Toungoo Dynasty of Burma (Myanmar), and the wet nurse of King Tabinshwehti. In 1516, she and her husband Mingyi Swe were hired to the household staff responsible for the royal infant Tabinshwehti. Although the Royal Chronicles proclaim her as a fifth generation descendant of King Thihathu of Pinya (r. 1310\u20131325) and his chief queen Mi Saw U of Pagan Dynasty, oral",
@@ -26,7 +27,8 @@
                 "fact_verification_score": {
                     "Y": 0.95,
                     "N": 0.05
-                }
+                },
+                "selected": false
             }
         ]
     },
@@ -47,7 +49,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             }
         ]
     },
@@ -68,7 +71,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Deborah Nadoolman Landis\"\nExcitation\"\" episode of \"\"The Big Bang Theory\"\" for her work on \"\"Raiders of the Lost Ark\"\" and \"\"Michael Jackson's Thriller\"\". Deborah Nadoolman Landis Deborah Nadoolman Landis (born May 26, 1952) is an American film and theater costume designer. She worked on such notable films as \"\"Animal House\"\", \"\"The Blues Brothers\"\", \"\"Raiders of the Lost Ark\"\" and \"\"Three Amigos\"\", all of which credited her as Deborah Nadoolman. Landis served two terms as president of the Costume Designers Guild of which she has been a member for more than thirty years. She is married to director John Landis; their son is screenwriter",
@@ -77,35 +81,39 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Sheila Landis\"\nmore than 30 years, Landis has never fallen into a rut. Her work continues to exude vitality, excitement, diversity, and originality\"\". Not content to simply sing and scat in the jazz vocal tradition, Landis takes the lead from vocal innovators Al Jarreau and Bobby McFerrin in expanding her vocal palette to include uncanny imitations of the harmonica, trumpet, flute, synthesizer, string bass and even drums. Sheila Landis Sheila Catherine Landis (born September 10, 1953, Detroit, Michigan, United States) is an American jazz, R&B vocalist and songwriter. In 1981, Landis formed her own label, SheLan Records, initially releasing five albums of",
                 "score": 74.77587127685547,
                 "doc_id": "19255841",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "N": 0.6,
                     "Y": 0.4
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Helen Landis\"\nwhere she also played and Ernestine in Novello's \"\"Perchance to Dream\"\", among other roles. She also played Madame Kurt in Novello's \"\"The Dancing Years\"\" in 1984 staging at the Wolsey Theatre, Ipswich, later recording the role for BBC Radio 2. Landis also appeared on the radio and the concert stage and continued to perform into her 80s. She retired to the entertainers' rest home Denville Hall in Northwood, London in 2007, where she died eight years later, just after her 92nd birthday. With Gilbert and Sullivan for All, in 1972, Landis recorded, on both record and video, the roles of",
                 "score": 73.83330535888672,
                 "doc_id": "18704947",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"J. D. Landis\"\nNarrated by Her Lover W. E., which is available only in Polish translation as Dagny, \u017bycie I \u015amier\u0106 (Dagny: Life and Death). He also published a book of poetry for children, \"\"Cars on Mars and 49 Other Poems for Kids on Earth.\"\" J. D. Landis is married to Denise Landis, a longtime recipe tester for \"\"The New York Times\"\" and the author of multiple cookbooks. J. D. Landis James David Landis (born June 30, 1942) is an American author and a former publisher and editor in chief of William Morrow and Company. Landis was born in Springfield, Massachusetts. He is",
                 "score": 73.84539794921875,
                 "doc_id": "19722708",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Richard Landis\"\ncredit as well. He produced Peter Allens second album, \"\"Tenterfield Saddler\"\", released on Metromedia. Landis also appeared on the album with musician credits. In 1978 Richard Landis was named West Coast director, talent acquisition for Capitol records based in Los Angeles. Landis previously held an identical position in New York City as East Coast director. In 1981 Richard Landis began producing music for Juice Newton. They released her multi-platinum album, \"\"Juice\"\" which charted two #1 singles and one #2. In an interview Juice Newton cited her lucky break as being the day she met Richard Landis: \"\"I believe that hooking",
@@ -144,10 +152,11 @@
                 "content": "\"Emma Thompson\"\n\"\"Harry Potter\"\" film series, \"\"Wit\"\" (2001), \"\"Love Actually\"\" (2003), \"\"Angels in America\"\" (2003), \"\"Nanny McPhee\"\" (2005), \"\"Stranger than Fiction\"\" (2006), \"\"Last Chance Harvey\"\" (2008), \"\"Men in Black 3\"\" (2012), \"\"Brave\"\" (2012), and \"\"Beauty and the Beast\"\" (2017). In 2013, she received acclaim and several award nominations for her portrayal of P. L. Travers in \"\"Saving Mr. Banks\"\". Thompson is married to actor Greg Wise, with whom she lives in London. They have one daughter and one son. She is an activist in the areas of human rights and environmentalism and has received criticism for her outspokenness. She has written two",
                 "score": 72.72125244140625,
                 "doc_id": "1400524",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Emma Dunn\"\nDunn wrote two books on elocution and speech: \"\"Thought Quality in the Voice\"\" (1933) and \"\"You Can Do It\"\" (1947). Emma Dunn was born 26 February 1875, in Birkenhead, England, although she sometimes gave her year of birth as 1883. Dunn married Harry Beresford, an actor who was then known professionally as Harry J. Morgan, in Chicago on 4 October 1897. They divorced on 10 February 1909, in New York City. She was awarded sole custody of their young daughter, Dorothy. On 19 May 1909, Dunn married John W. Stokes (John W. S. Sullivan), an actor, playwright and theatrical manager.",
@@ -156,7 +165,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             }
         ]
     },
@@ -177,7 +187,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Judy Sheindlin\"\nchildren, Jamie and Adam, and divorced in 1976 after 12 years of marriage. Adam previously served as District Attorney of Putnam County. In 1977, she married Judge Jerry Sheindlin, who was an arbitrator on \"\"The People's Court\"\" from 1999 to 2001. They divorced in 1990, partially as a result of the stress and struggles that Judy endured after her father's death that same year. They remarried the following year. She has three stepchildren with Sheindlin: Gregory, Jonathan and Nicole, and 13 grandchildren. Jonathan is a retinal surgeon, and Greg and Nicole are lawyers. Sheindlin owns homes in several states, including",
@@ -186,7 +197,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             }
         ]
     },
@@ -207,7 +219,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Tom Sackville\"\nTom Sackville Thomas Geoffrey Sackville (born 26 October 1950) is a British Conservative politician. Tom Sackville is the second son of William Sackville, 10th Earl De La Warr (d. February 1988) and Anne Rachel Devas, and his brother is William Herbrand Sackville, the 11th Earl De La Warr. In 1979, he married Catherine Th\u00e9r\u00e8sa Windsor-Lewis, daughter of Brigadier James Charles Windsor-Lewis. They have two children, Arthur Michael Sackville (b. 1983) and Savannah Elizabeth Sackville (b. 1986), both adopted. He was educated at Eton College and Lincoln College, Oxford, and began his professional career in merchant banking. Sackville first ran for",
@@ -217,7 +230,8 @@
                 "fact_verification_score": {
                     "Y": 0.8,
                     "N": 0.2
-                }
+                },
+                "selected": true
             }
         ]
     },
@@ -238,7 +252,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Marcia Euphemia\"\nman. In his desire to follow his father's mode of life, he had set out for Philippopolis, where he could be enrolled in the legions\"\"\"\". Theodorus Lector, however, reports Marcian to be an Illyrian. Her wedding to Anthemius is estimated to about 453. Her new husband was son to Procopius, \"\"magister utriusque militiae\"\" (\"\"Master of Soldiers of both armies\"\", commander of both cavalry and infantry) of the Eastern Roman Empire from 422 to 424. According to Sidonius Apollinaris, the \"\"magister militum\"\" was a namesake descendant of Procopius who had served as a rival emperor from 365 to 366. Father and",
@@ -262,10 +277,11 @@
                 "content": "\"Procopius Anthemius\"\n471) and his sister Alypia married Ricimer, the powerful \"\"magister militum\"\" of barbarian origin. In 474, Leo died. He had left no sons and two daughters, the elder Ariadne, born before Leo was raised to the throne and married to the Isaurian general Zeno, and the younger Leontia, born when Leo was already emperor and married to Procopius' brother, Marcian. The people of Constantinople despised the Isaurians, whom they considered barbarians; furthermore, Leontia's status as \"\"porphyrogenita\"\" gave her some sort of precedence to the throne, according to the faction that opposed Zeno. For this reason Marcian tried to overthrow Zeno.",
                 "score": 71.29534149169922,
                 "doc_id": "5119726",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             }
         ]
     },
@@ -283,10 +299,11 @@
                 "content": "\"Gian-Carlo Coppola\"\nfilm \"\"Palo Alto\"\". Francis Ford Coppola subsequently dedicated 1988's \"\"\"\" to his son. A scene in Francis Ford Coppola's 2011 film \"\"Twixt\"\" shows the death of a character as being similar to his son's death. At the Inglenook winery, owned by Eleanor and Francis in Napa, California, there is a 12-acre vineyard named the 'Gio vineyard,' after Gian-Carlo by the workers, which was planted in 1988. Eleanor Coppola's touring art installation, 'Circle of Memory,' commemorates the life of Gian-Carlo and has been exhibited in San Diego, Oakland, Sante Fe, Montpellier, Salzburg, Stockholm, and Oslo. Gian-Carlo Coppola Gian-Carlo Coppola (September 17,",
                 "score": 75.7880859375,
                 "doc_id": "8986309",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Eleanor Coppola\"\n(n\u00e8e Loughton) in Sunset Beach, California. She graduated from UCLA with a degree in applied design and was a member of the women's fraternity Alpha Chi Omega (Alpha Psi chapter). While working on the set of the 1962 horror film \"\"Dementia 13\"\", she met her future husband Francis Ford Coppola. Her position was assistant art director, while Coppola was making his directorial debut with the film. The couple had been dating for several months when Eleanor discovered in 1963 that she was pregnant. Initially Eleanor considered giving the baby up for adoption, but was convinced otherwise by Francis Ford Coppola.",
@@ -304,17 +321,19 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Francis Ford Coppola\"\nartist, one usually working outside his / her expected field. Previous guest designers include Gus Van Sant, Tom Waits, Laurie Anderson, Marjane Satrapi, Guillermo del Toro, David Bowie, David Byrne, and Dennis Hopper. Coppola serves as founding editor and publisher of \"\"All-Story\"\". Coppola stated that \"\"The Godfather Part IV\"\" was never made as Mario Puzo died before they had a chance to write the film. Andy Garc\u00eda has since claimed the film's script was nearly produced. Coppola was the jury president at the 1996 Cannes Film Festival and he also took part as a special guest at the 46th International",
                 "score": 73.11168670654297,
                 "doc_id": "138153",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "N": 0.15,
                     "Y": 0.85
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Anton Coppola\"\nAnton Coppola Antonio Francesco Coppola (born March 21, 1917) is an American opera conductor and composer. He is the uncle of film director Francis Ford Coppola and actress Talia Shire, as well as the grand-uncle of Nicolas Cage, Sofia Coppola, Gian-Carlo Coppola, Jason Schwartzman and Robert Schwartzman, and is the younger brother of American composer and musician Carmine Coppola. Coppola started his career at the age of eight with the Metropolitan Opera Children's Chorus. At the age of 9 he was in the Met's debut of Turandot. He served as an army bandmaster during World War II, conductor at Radio",
@@ -324,7 +343,8 @@
                 "fact_verification_score": {
                     "Y": 0.95,
                     "N": 0.05
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"August Coppola\"\n\"\"Rumble Fish\"\" to him. In \"\"The Sorcerer's Apprentice\"\" (2010), August Coppola's name is mentioned at the very end of credits. August Coppola August Floyd Coppola (February 16, 1934 \u2013 October 27, 2009) was an American academic, author, film executive and advocate for the arts. He was the father of actor Nicolas Cage. August Coppola was the son of composer and flutist Carmine Coppola (1910\u20131991) and Italia Pennino (1912\u20132004), a lyricist and matriarch of the Coppola family. His siblings are film director Francis Ford Coppola and actress Talia Shire; his uncle is composer Anton Coppola. August Coppola married German-American dancer Joy",
@@ -333,7 +353,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             }
         ]
     },
@@ -354,7 +375,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             }
         ]
     },
@@ -518,16 +540,18 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Tottie Goldsmith\"\nWith the other, after having a bout of Chronic Fatigue Syndrome and struggling for years with sleep issues, she used her meditation skills with sleep specialist Chis Bunny to record a sleep CD that has been prescribed by doctors. Goldsmith is the daughter of Melbourne restaurateur and nightclub owner Brian Goldsmith and British-born actress Rona Newton-John. Her great-grandfather was German physicist and Nobel Prize winner Max Born. Olivia Newton-John is her aunt, the sister of her mother. Bass guitarist Brett Goldsmith is her elder brother and racecar driver Emerson Newton-John her half brother. She also has a sister Fiona, half",
                 "score": 73.45214080810547,
                 "doc_id": "5679155",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Brett Goldsmith\"\nBrett Goldsmith Brett Hugh Goldsmith (born 4 June 1961) is an Australian-born songwriter, music programmer/producer and photographer. Goldsmith is the son of British-born actress Rona Newton-John and Melbourne nightclub owner Brian Goldsmith. His grandfather was University of Melbourne professor Brinley (\"\"Bryn\"\") Newton-John. His great-grandfather was German physicist and Nobel Prize winner Max Born. Olivia Newton-John is his aunt, singer/actress Tottie Goldsmith is his younger sister and race car driver Emerson Newton-John his younger half-brother. In the mid 1980s Goldsmith programmed (and played bass guitar & keyboards on) the album \"\"Chantoozies\"\" for the band Chantoozies, a top ten album which was",
@@ -536,7 +560,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             }
         ]
     },
@@ -557,7 +582,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Paul Buckle\"\nlater ensured his team became the first from non-League to defeat a top flight side in the FA Cup for 24 years when Luton beat Norwich City 1\u20130. Buckle left Luton in February 2013 for personal reasons. Buckle married sports broadcaster Rebecca Lowe in June 2013 and later moved to the US where he was appointed as Technical Director at the Met Oval in New York in November of that year. He returned to the Football League in November 2014 to take the manager's job at Cheltenham Town in League Two but left in February 2015. On 8 July 2015",
@@ -566,7 +592,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             }
         ]
     },
@@ -598,7 +625,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             }
         ]
     },
@@ -619,16 +647,18 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Bonne of Luxembourg\"\nBonne of Luxembourg Bonne of Luxemburg or \"\"Jutta of Luxemburg\"\" (20 May 131511 September 1349), was born Jutta (Judith), the second daughter of John the Blind, king of Bohemia, and his first wife, Elisabeth of Bohemia. She was the first wife of King John II of France; however, as she died a year prior to his accession, she was never a French queen. Jutta was referred to in French historiography as Bonne de Luxembourg. She was a member of the House of Luxembourg. Among her children were Charles V of France, Philip II, Duke of Burgundy, and Joan, Queen of",
                 "score": 76.88154602050781,
                 "doc_id": "3360630",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Bonne of Artois\"\nno surviving issue and she had died young, so Philip married Bonne. Bonne is sometimes confused with Philip's biological aunt, also named Bonne of Burgundy (1379\u20131399) in part due to the papal dispensation required for the marriage which made no distinction between a marital aunt and a biological aunt. The marriage of Bonne and Philip lasted little over a year and produced no surviving children. Bonne died on 15 September 1425 in Dijon. She had two sons: Bonne of Artois Bonne of Artois (1396 \u2013 17 September 1425, Dijon) was Countess consort of Nevers by marriage to Philip II, Count",
@@ -637,7 +667,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Bonne of Armagnac\"\nat the Battle of Agincourt on 25 October 1415, Charles was taken prisoner by the English. Bonne had not borne any children prior to his imprisonment. She died sometime between 1430 and 1435 while her husband was still in captivity. Bonne appears in the critically acclaimed historical novel \"\"Het woud der verwachting\"\" (1949) by Hella Haasse, (translated into English in 1989 under the title \"\"\"\"In a Dark Wood Wandering\"\"\"\"). The novel portrays the life of Bonne's husband Charles. Charles and Bonne's marriage at the Chateau de Dourdan is depicted in the elaborate illuminated manuscript entitled \"\"Tr\u00e8s Riches Heures du duc",
@@ -646,7 +677,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Bonne de Pons d'Heudicourt\"\nBonne de Pons d'Heudicourt Bonne de Pons d'Heudicourt (1641-1709), was the royal mistress of Louis XIV of France in 1665. She was known as \"\"la Grande Louve\"\" after her spouse, who was nicknamed \"\"The Great Wolf\"\". She was the cousin of Madame de Montespan. She converted to Catholicism from Protestantism and became a lady-in-waiting to the queen, Maria Theresia. In 1665, she had a relationship with Louis XIV. Her family had her removed from court and married to the courtier marquess Michel Sublet d'Heudicourt, master of the hunt at court. She was banished from court 1672 after having revealed the",
@@ -655,7 +687,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Philip the Good\"\nday, at the age of 8, to Michelle of Valois, a daughter of King Charles VI of France and Isabeau of Bavaria. They were married in June 1409. After Michelle's death in 1422, Philip married Bonne of Artois, a daughter of Philip of Artois, Count of Eu, and also the widow of his uncle, Philip II, Count of Nevers, in Moulins-les-Engelbert on 30 November 1424. Bonne of Artois is sometimes confused with Philip's biological aunt, also named Bonne (a sister of John the Fearless who lived from 1379 to 1399), in part due to the papal dispensation required for the",
@@ -664,7 +697,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Bonne of Luxembourg\"\n11 September 1349 of the bubonic plague in Maubisson, France at the age of thirty-four. She was buried in the Abbey of Maubuisson. Less than six months after Bonne's death, John married Joan I, Countess of Auvergne. John and Bonne had the following children together: Bonne of Luxembourg Bonne of Luxemburg or \"\"Jutta of Luxemburg\"\" (20 May 131511 September 1349), was born Jutta (Judith), the second daughter of John the Blind, king of Bohemia, and his first wife, Elisabeth of Bohemia. She was the first wife of King John II of France; however, as she died a year prior to",
@@ -674,7 +708,8 @@
                 "fact_verification_score": {
                     "Y": 0.95,
                     "N": 0.05
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Bonne of Artois\"\nBonne of Artois Bonne of Artois (1396 \u2013 17 September 1425, Dijon) was Countess consort of Nevers by marriage to Philip II, Count of Nevers, and Duchess consort of Burgundy by marriage to Philip III, Duke of Burgundy. She served as regent of the County of Nevers during the minority of her son from 1415 until 1424. She was the daughter of Philip of Artois, Count of Eu, and Marie of Berry, daughter of John, Duke of Berry. She married first at Beaumont-en-Artois on 20 June 1413, to Philip II, Count of Nevers. He was son of Philip the Bold",
@@ -683,7 +718,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             }
         ]
     },
@@ -704,7 +740,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Nadine de Rothschild\"\nto the Rothschild family under the Austrian empire. She wrote a book about manners (\"\"Le Bonheur de S\u00e9duire l'Art de R\u00e9ussir\"\") and her autobiography (\"\"La baronne rentre \u00e0 cinq heures\"\"). In addition, Lhopitalier provided some reviews in the press on the same subject. Nadine de Rothschild Nadine de Rothschild (n\u00e9e Nadine Lhopitalier; born 18 April 1932) is a French author and former actress. She is the widow of banker Edmond Adolphe de Rothschild, a member of the Rothschild family. Nadine Lhopitalier was born in Saint-Quentin, Aisne, France. She became the model of the painter Jean-Gabriel Domergue, a socialite who opened",
@@ -713,7 +750,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Nadine de Rothschild\"\nAdolphe de Rothschild of the French branch of the Rothschild family. At the time, Edmund was chairman and principal owner of the Edmond de Rothschild Group, a private banking group headquartered in Geneva, Switzerland. Although she was raised Roman Catholic, she converted to Judaism stating: \"\"It would not have been possible to have the name Rothschild and be a Catholic... Nor would it be right for the son of a Rothschild to be half-Jewish and half-Catholic.\"\" They had one son born in 1963, Benjamin de Rothschild, shortly after their marriage. Lhopitalier used the noble title of her husband (Baroness), issued",
@@ -728,10 +766,11 @@
                 "content": "\"Ariane de Rothschild\"\nthey are familiar with the possibilities.\"\" She is deeply committed to Israel: \"\"Israel is very precious to me. It is totally ingrained in the family, part of the legacy, part of the DNA. We are all particularly committed to Israel.\"\" Ariane de Rothschild Ariane de Rothschild (n\u00e9e Langner, born in November 1965) is President of the Executive Committee of Edmond de Rothschild since 2015, and vice-president of the Edmond de Rothschild Holding SA since 1999. She has been married since 23 January 1999 to Benjamin de Rothschild, with whom she has four daughters. Ariane de Rothschild was born in San",
                 "score": 76.04743194580078,
                 "doc_id": "13191414",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Ariane de Rothschild\"\nAriane de Rothschild Ariane de Rothschild (n\u00e9e Langner, born in November 1965) is President of the Executive Committee of Edmond de Rothschild since 2015, and vice-president of the Edmond de Rothschild Holding SA since 1999. She has been married since 23 January 1999 to Benjamin de Rothschild, with whom she has four daughters. Ariane de Rothschild was born in San Salvador, El Salvador to a father who was a senior executive at an international pharmaceutical company. Until the age of eighteen, Ariane de Rothschild lived in Bangladesh, Colombia and the former Zaire (DRC). First a broker at Soci\u00e9t\u00e9 G\u00e9n\u00e9rale in",
@@ -740,7 +779,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"E\u0301lie de Rothschild\"\nRothschild is the lover of Pamela Churchill?' she replied: \"\"My husband, Sir\"\". This remark undermined Pamela as much as any other retributive strikes and presently the affair receded. His nephew \u00c9ric de Rothschild, son of Alain, took over at Ch\u00e2teau Lafite-Rothschild in 1974. \u00c9lie died of a heart attack when on vacation at his hunting lodge near the village of Scharnitz outside Innsbruck in Austria. His wife predeceased him in 2003. He is survived by a son, Nathaniel, and two daughters, Elisabeth and Nelly. He is survived by a daughter (fathered with the Parisian antiquaire Ariane Dandois), Ondine, who bears",
@@ -3617,7 +3657,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Marjorie Guthrie\"\nthat Woody Guthrie was living in New York City, decided to invite him to play live on-stage for the performance. Marjorie insisted on going with Sophie. Since hearing Dust Bowl Ballads she had dreamed Woody was a tall cowboy with a Stetson hat\u2026when she knocked on the door, there appeared a 5\u20196\u2033 wiry guy. She turned to look at Sophie and said, \u201cI\u2019m going to marry him.\u201d They were married on November 13, 1945.\"\" Together they had four children; Cathy Guthrie (b. 1943/d. 1947), Arlo Guthrie (b. 1947), Joady Guthrie (b. 1948), and Nora Guthrie (1950). Cathy tragically died at",
@@ -3793,7 +3834,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Mary of Guelders\"\nMary of Guelders Mary of Guelders (; c. 1434 \u2013 1 December 1463) was the queen consort of Scotland by marriage to King James II of Scotland. She served as regent of Scotland from 1460 to 1463. She was the daughter of Arnold, Duke of Guelders, and Catherine of Cleves. She was a great-niece of Philip the Good, Duke of Burgundy. Philip and his wife Isabella of Portugal at first planned to have Mary betrothed to Charles, Count of Maine, but her father could not pay the dowry. Mary stayed on at the Burgundian court, where Isabella frequently paid for",
@@ -3817,10 +3859,11 @@
                 "content": "\"Mary, Queen of Scots\"\nMary, Queen of Scots Mary, Queen of Scots (8 December 1542 \u2013 8 February 1587), also known as Mary Stuart or Mary I of Scotland, reigned over Scotland from 14 December 1542 to 24 July 1567. Mary, the only surviving legitimate child of King James V, was six days old when her father died and she acceded to the throne. She spent most of her childhood in France while Scotland was ruled by regents, and in 1558, she married the Dauphin of France, Francis. He ascended the French throne as King Francis II in 1559, and Mary briefly became queen",
                 "score": 78.50004577636719,
                 "doc_id": "273179",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Mary Queen of Scots (2013 film)\"\nwell as the Italian musician David Rizzio. Upon reaching adulthood Mary is married to the Dauphin, Francis, who becomes King of France when his father dies. News arrives that Queen Mary I of England has died and her sister, Elizabeth, has become Queen despite her official status as a bastard. Mary is aware of her own legitimate claim to the English throne; although she writes to Elizabeth promising not to challenge her, she insists on using the English coat of arms and the title \"\"Queen of France, Scotland and England\"\". After Francis's early death, Mary returns to Scotland with her",
