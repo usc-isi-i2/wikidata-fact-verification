@@ -200,7 +200,8 @@
                 },
                 "selected": false
             }
-        ]
+        ],
+        "comment": "Confusing: First name is not exactly matching."
     },
     {
         "pair": [
@@ -403,10 +404,11 @@
                 "content": "\"Jay W. Jensen\"\nspeaker at the Tennessee Williams Literary Fest in New Orleans in 1998, and appeared also at the Tennessee Williams Festival in 2003. Jensen was an only child. His father, John W. Jensen, died in the 1950s. His mother, Thelma aka Billie, died in January 1999 at the age of 93. Jensen never married, but in the 1970s, he was engaged to transsexual dancer Jennifer Fox. The two announced their engagement on \"\"The Joey Carr Show\"\", a local South Florida television program. Years later, Fox was interviewed in \"\"Class Act\"\", a documentary on Jensen's life. Jensen received numerous awards during his",
                 "score": 77.66190338134766,
                 "doc_id": "13520360",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Bonnie L. Jensen\"\nBonnie L. Jensen Bonnie Lou Jensen (born October 11, 1938) is an American former missionary, international relations specialist, and director of the ELCA Global Mission. Bonnie Lou Hagedorn was born in Royal, Iowa, and received degrees from Dana College and Wartburg Theological Seminary. She married American theologian Richard A. Jensen in 1957. Jensen moved to Addis Ababa, Ethiopia, to assist with the founding of the Mekane Yesus Seminary in 1962. Jensen served as executive director of the former American Lutheran Church Women (ALCW), Minneapolis, Minnesota from 1981 to 1987. From 1982 to 1987, Jensen and her husband, served as co-hosts",
@@ -424,7 +426,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             }
         ]
     },
@@ -442,10 +445,11 @@
                 "content": "\"Catherine I of Russia\"\nCatherine I of Russia Catherine I (, born , later known as Marta Samuilovna Skavronskaya; \u2013 ) was the second wife of Peter the Great and Empress of Russia from 1725 until her death. The life of Catherine I was said by Voltaire to be nearly as extraordinary as that of Peter the Great himself. There are no documents that confirm her origins. Said to have been born on 15 April 1684 (o.s. 5 April), she was originally named Marta Helena Skowro\u0144ska. Marta was the daughter of Samuel Skowro\u0144ski (later spelt \"\"Samuil Skavronsky\"\"), a Roman Catholic peasant from the Polish\u2013Lithuanian",
                 "score": 79.92457580566406,
                 "doc_id": "546803",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Maria of Tver\"\nbeen suffering from \"\"infirmity\"\" since childhood. She gave birth to Ivan the Young in 1458. Maria of Tver Maria Borisovna of Tver (\"\"\u041c\u0430\u0440\u0438\u044f \u0411\u043e\u0440\u0438\u0441\u043e\u0432\u043d\u0430\"\" in Russian) (1442 \u2013 1467) was Grand Princess consort of Muscovy, married in 1452, to Grand Prince Ivan III and daughter of Boris Alexandrovich of Tver. When Vasili II (Ivan III's father) was getting ready to attack Dmitry Shemyaka, he found an ally in the person of Boris of Tver. The two decided to seal the alliance by arranging a betrothal between the future Ivan III and Maria of Tver in 1452. It appears that she",
@@ -519,7 +523,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             }
         ]
     },
@@ -557,11 +562,11 @@
                 "content": "\"Brett Goldsmith\"\nBrett Goldsmith Brett Hugh Goldsmith (born 4 June 1961) is an Australian-born songwriter, music programmer/producer and photographer. Goldsmith is the son of British-born actress Rona Newton-John and Melbourne nightclub owner Brian Goldsmith. His grandfather was University of Melbourne professor Brinley (\"\"Bryn\"\") Newton-John. His great-grandfather was German physicist and Nobel Prize winner Max Born. Olivia Newton-John is his aunt, singer/actress Tottie Goldsmith is his younger sister and race car driver Emerson Newton-John his younger half-brother. In the mid 1980s Goldsmith programmed (and played bass guitar & keyboards on) the album \"\"Chantoozies\"\" for the band Chantoozies, a top ten album which was",
                 "score": 73.04914855957031,
                 "doc_id": "18015333",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
                 },
-                "selected": false
+                "selected": true
             }
         ]
     },
@@ -606,7 +611,8 @@
             "Is Ethel Griffies married to Edward Cooper?",
             "Is Edward Cooper married to Ethel Griffies?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "No support"
     },
     {
         "pair": [
@@ -628,7 +634,8 @@
                 },
                 "selected": true
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -721,7 +728,8 @@
                 },
                 "selected": false
             }
-        ]
+        ],
+        "commnet": "covered"
     },
     {
         "pair": [
@@ -791,7 +799,8 @@
                     "Y": 1.0
                 }
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -861,10 +870,11 @@
                 "content": "\"Albert, 8th Prince of Thurn and Taxis\"\nMargarethe Klementine of Austria (6 July 1870 \u2013 2 May 1955), daughter of Archduke Joseph Karl of Austria. Albert purchased the 'Empress Eugenie Tiara' as a wedding present for Margarethe; the tiara, designed by Gabriel Lemmonier in 1853, was part of the French crown jewels and is now in the Louvre in Paris. Albert and Margarethe had eight children: Albert died at Regensburg where he is buried with his wife in the crypt chapel of Schloss St. Emmeram, formerly St. Emmeram's Abbey. Albert, 8th Prince of Thurn and Taxis Albert Maria Joseph Maximilian Lamoral, 8th Prince of Thurn and Taxis",
                 "score": 77.5195541381836,
                 "doc_id": "10582403",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "Birstein\nthis faith. The church has been the site of many Isenburg weddings, most recently that of Princess Katharina of Isenburg to Archduke Martin of Austria-Este in 2004. Princess Katharina's younger sister, Princess Sophie of Isenburg, married Georg Friedrich, Prince of Prussia, in August 2011. This wedding, however, had to take place in Potsdam-Sanssouci as the bridegroom is the head of the former Imperial House of Germany and Royal House of Prussia. Katharina and Sophie's eldest brother, Franz Alexander, the heir to the family castle, was married to plastic surgeon Sarah Lorenz in a civil ceremony in Birstein, followed by a",
@@ -903,7 +913,8 @@
                     "Y": 1.0
                 }
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -914,7 +925,8 @@
             "Is Jimmy Walker married to Betty Compton?",
             "Is Betty Compton married to Jimmy Walker?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "No support"
     },
     {
         "pair": [
@@ -933,16 +945,18 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"William Brooke, 10th Baron Cobham\"\nFarnese, Duke of Parma. In 1589, his eldest daughter Elizabeth married William Cecil's youngest son, Robert Cecil, who would later be made the Earl of Salisbury. By the early 1590s, Brooke had assumed a less active role in government. In 1592, Brooke's second wife Frances died. He succeeded Baron Hunsdon, as Lord Chamberlain in August 1596, and held the office until his death on 6 March 1597. During his time, William Brooke built Cobham Hall, a Tudor style mansion that remained in his family till the mid-17th century. William Brooke married firstly Dorothy Nevill (d. 22 September 1559), daughter of",
                 "score": 78.68280029296875,
                 "doc_id": "3784528",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Henry Brooke, 11th Baron Cobham\"\nancestor of Lord Cobham. Though Falstaff is more likely modelled on his father William Brooke, 10th Baron Cobham (also descended from John Oldcastle) who was married to Frances Newton, whose family name was originally Caradock; referenced in 2 \"\"Henry IV\"\" when Falstaff sings \"\"The Boy and the Mantle,\"\" a ballad in which Sir Caradoc's wife comes away with her fidelity and reputation intact (McKeen 1981). This could point to William Brooke, being married to a Caradock such as the Sir Cacadoc in the ballad sung by Falstaff, as the model for Falstaff rather than Henry, being the son of a",
@@ -999,7 +1013,8 @@
                     "Y": 1.0
                 }
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -1058,7 +1073,8 @@
                     "Y": 1.0
                 }
             }
-        ]
+        ],
+        "comment": "skipped"
     },
     {
         "pair": [
@@ -1069,7 +1085,8 @@
             "Is Ole Anton Qvam married to Fredrikke Marie Qvam?",
             "Is Fredrikke Marie Qvam married to Ole Anton Qvam?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "No support"
     },
     {
         "pair": [
@@ -1100,7 +1117,8 @@
                     "N": 0.05
                 }
             }
-        ]
+        ],
+        "comment": "skipped"
     },
     {
         "pair": [
@@ -1116,11 +1134,12 @@
                 "content": "\"Amy Robsart\"\nAmy Robsart Amy Dudley (n\u00e9e Robsart) (7 June 1532 \u2013 8 September 1560) was the first wife of Lord Robert Dudley, favourite of Elizabeth I of England. She is primarily known for her death by falling down a flight of stairs, the circumstances of which have often been regarded as suspicious. Amy Robsart was the only child of a substantial Norfolk gentleman and at nearly 18 married Robert Dudley, a son of John Dudley, 1st Duke of Northumberland. In 1553 Robert Dudley was condemned to death and imprisoned in the Tower of London, where Amy Dudley was allowed to visit",
                 "score": 80.25930786132812,
                 "doc_id": "3991887",
-                "fact_verification_result": false,
+                "fact_verification_result": true,
                 "fact_verification_score": {
                     "N": 0.95,
                     "Y": 0.05
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Amy Robsart\"\nopen to such a foreseeable scandal. Amy Robsart Amy Dudley (n\u00e9e Robsart) (7 June 1532 \u2013 8 September 1560) was the first wife of Lord Robert Dudley, favourite of Elizabeth I of England. She is primarily known for her death by falling down a flight of stairs, the circumstances of which have often been regarded as suspicious. Amy Robsart was the only child of a substantial Norfolk gentleman and at nearly 18 married Robert Dudley, a son of John Dudley, 1st Duke of Northumberland. In 1553 Robert Dudley was condemned to death and imprisoned in the Tower of London, where",
@@ -1130,17 +1149,19 @@
                 "fact_verification_score": {
                     "N": 0.9,
                     "Y": 0.1
-                }
+                },
+                "selected": false
             },
             {
                 "content": "\"Amy Robsart\"\nshared by most modern historians. He remained Elizabeth's closest favourite, but with respect to her reputation she could not risk a marriage with him. A tradition that Sir Richard Verney, a follower of Robert Dudley, organized Amy Dudley's violent death evolved early, and \"\"Leicester's Commonwealth\"\", a notorious and influential libel of 1584 against Robert Dudley, by then Earl of Leicester, perpetuated this version of events. Interest in Amy Robsart's fate was rekindled in the 19th century by Walter Scott's novel, \"\"Kenilworth\"\". The most widely accepted modern explanations of her death have been breast cancer and suicide, although a few historians",
                 "score": 79.7471923828125,
                 "doc_id": "3991890",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 0.85,
                     "N": 0.15
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Kenilworth (novel)\"\nis included in Volume 25b. \"\"Kenilworth\"\" is set in the reign of Queen Elizabeth I, and centers on the secret marriage of Robert Dudley, 1st Earl of Leicester, and Amy Robsart, daughter of Sir Hugh Robsart. Amy passionately loves her husband, and the Earl loves her in return, but he is driven by ambition. He is courting the Queen's favour, and only by keeping his marriage to Amy secret can he hope to rise to the height of power that he desires. At the end of the book, the Queen discovers the truth, to the shame of the Earl. The",
@@ -1151,7 +1172,8 @@
                     "Y": 1.0
                 }
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -1171,9 +1193,11 @@
                 "fact_verification_score": {
                     "Y": 0.95,
                     "N": 0.05
-                }
+                },
+                "selected": true
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -1210,7 +1234,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Frank E. Butler\"\nvariety shows. After meeting at a shooting competition in Cincinnati, Ohio, Butler married Annie Oakley on August 23, 1876, although he would later claim the date was June 20, 1882. They developed their shooting act in 1882 when Oakley stood in for Butler's sick partner, John Graham. In 1884, the Butlers joined the Sells Brothers Circus. From 1885 to 1901, they were a fixture on \"\"Buffalo Bill's Wild West Show\"\". As Oakley became the star attraction, Butler became her manager and wrote articles and press releases. Oakley said that the financial part was always in her husband's hands. Oakley returned",
@@ -1230,7 +1255,8 @@
                 "fact_verification_score": {
                     "Y": 0.95,
                     "N": 0.05
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Annie Oakley House\"\nAnnie Oakley House Annie Oakley House is a historic home located at Cambridge, Dorchester County, Maryland. It is a -story, brick-and-frame, Colonial Revival\u2013influenced bungalow constructed in 1913. Behind the house is a small garage and studio apartment. The house overlooks Hambrooks Bay, a protected body of water off the Choptank River. It was constructed as a retirement home for Annie Oakley and her husband, Frank Butler, and is the only surviving property in the nation that was either owned or occupied by Oakley as her primary and permanent residence. It features built-in shelves originally intended to display shooting trophies. It",
@@ -1250,7 +1276,8 @@
                     "Y": 1.0
                 }
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -1270,9 +1297,11 @@
                 "fact_verification_score": {
                     "Y": 0.95,
                     "N": 0.05
-                }
+                },
+                "selected": true
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -1283,7 +1312,8 @@
             "Is Joseph Auslander married to Audrey Wurdemann?",
             "Is Audrey Wurdemann married to Joseph Auslander?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "No support"
     },
     {
         "pair": [
@@ -1341,7 +1371,8 @@
                     "Y": 1.0
                 }
             }
-        ]
+        ],
+        "comment": "Confusing"
     },
     {
         "pair": [
@@ -1352,7 +1383,8 @@
             "Is Roger Michell married to Kate Buffery?",
             "Is Kate Buffery married to Roger Michell?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "No support"
     },
     {
         "pair": [
@@ -1371,7 +1403,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Mary Livingstone\"\nwas reputed to buy so much ladies' hosiery from her that he helped her set a sales record; he also called her several times a day when on the road. Jack Benny married Mary Livingstone 14 January 1927 at the Clayton Hotel in Waukegan, Illinois, one week after proposing. Sadie took part in some of Jack's vaudeville performances but never thought of herself as a full-time performer, seeming glad to be done with it when he moved to radio in 1932. Then came the day he called her at home and asked her to come to the studio quickly. An",
@@ -1407,19 +1440,22 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Mary Livingstone\"\nWashington, the daughter of David Marks, a prosperous scrap metal dealer, and Ester (maiden name unknown). Raised in Vancouver, British Columbia, Canada, she first met Jack Benny there in 1921 or 1922 when Benny, already an experienced vaudevillian, played at the Orpheum Theatre in Vancouver. Zeppo Marx took Benny to the home of David Marks, where they enjoyed a quiet and comfortable gathering. Marks\u2019s youngest daughter, Sadie (her name was anglicized), was very impressed by this comedian who played a violin as part of his act. By her own testimony she made up her mind that she would grow up",
                 "score": 77.81159973144531,
                 "doc_id": "5988578",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 0.8,
                     "N": 0.2
-                }
+                },
+                "selected": true
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -1430,7 +1466,8 @@
             "Is Nuri Bilge Ceylan married to Ebru Ceylan?",
             "Is Ebru Ceylan married to Nuri Bilge Ceylan?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "No support"
     },
     {
         "pair": [
@@ -1441,7 +1478,8 @@
             "Is Robert Keohane married to Nannerl O. Keohane?",
             "Is Nannerl O. Keohane married to Robert Keohane?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "No support"
     },
     {
         "pair": [
@@ -1461,9 +1499,11 @@
                 "fact_verification_score": {
                     "Y": 0.9,
                     "N": 0.1
-                }
+                },
+                "selected": true
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -1484,7 +1524,8 @@
                     "Y": 1.0
                 }
             }
-        ]
+        ],
+        "comment": "Similar to older ones"
     },
     {
         "pair": [
@@ -1500,19 +1541,21 @@
                 "content": "\"Elizabeth of Serbia\"\nElizabeth of Serbia Elizabeth of Serbia (/\u0415\u043b\u0438\u0437\u0430\u0431\u0435\u0442\u0430, /\u0408\u0435\u043b\u0438\u0441\u0430\u0432\u0435\u0442\u0430; 1270 \u2014 died 1331) was Baness of Bosnia by her marriage to Stephen I, Ban of Bosnia. Elizabeth was the daughter of King Stephen Dragutin of Serbia of the Nemanji\u0107 dynasty. Her mother was Catherine of Hungary. Elizabeth was the second of four children; her brother was Stephen Vladislav II of Syrmia. After 1283, she married Stephen I Kotroman, Ban of Bosnia. Dragutin had already controlled two banates in Bosnia: Usora and Soli and Kotroman immediately fell under his influence \u2013 many of his acts were of Dragutin's command. The marriage was",
                 "score": 82.69599914550781,
                 "doc_id": "13834811",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Elizabeth of Serbia\"\ndescent from Elizabeth. Elizabeth of Serbia Elizabeth of Serbia (/\u0415\u043b\u0438\u0437\u0430\u0431\u0435\u0442\u0430, /\u0408\u0435\u043b\u0438\u0441\u0430\u0432\u0435\u0442\u0430; 1270 \u2014 died 1331) was Baness of Bosnia by her marriage to Stephen I, Ban of Bosnia. Elizabeth was the daughter of King Stephen Dragutin of Serbia of the Nemanji\u0107 dynasty. Her mother was Catherine of Hungary. Elizabeth was the second of four children; her brother was Stephen Vladislav II of Syrmia. After 1283, she married Stephen I Kotroman, Ban of Bosnia. Dragutin had already controlled two banates in Bosnia: Usora and Soli and Kotroman immediately fell under his influence \u2013 many of his acts were of Dragutin's command.",
                 "score": 82.67558288574219,
                 "doc_id": "13834813",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Elizabeth of Hungary, Queen of Serbia\"\nElizabeth of Hungary, Queen of Serbia Elizabeth of Hungary the widow (, \"\"/Jelisaveta\"\"; c. 1255\u20131313) was one of the daughters of King Stephen V of Hungary and his wife Elizabeth the Cuman. She was a member of the House of Arpad and later became Queen consort of Serbia by her marriage to Stefan Uro\u0161 II Milutin of Serbia. Elizabeth was the older one of six children, being born sometime in the 1260s. Elizabeth's mother had come from the Cumans, who followed the Shamanist religion, and was converted to Christianity in childhood. Although her parents took baptism in 1250s, they were",
@@ -1522,7 +1565,8 @@
                 "fact_verification_score": {
                     "N": 0.35,
                     "Y": 0.65
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Stephen II, Ban of Bosnia\"\nHerman I of Celje, but the actual marriage happened long after Stephen II's death. Elizabeth of Poland, the mother of the King of Hungary, wanted to arrange a marriage between her son and Stephen's daughter Elizabeth. She insisted immediately on bringing her to the Hungarian court for fosterage. Stephen was reluctant at first, but eventually dispatched Elizabeth. After three years of life at the Hungarian court, the King's mother invited Stephen to Hungary for the wedding. The Bosnian Ban became gravely ill and could not be present at the ceremony. Stephen II Kotromani\u0107 died in September 1353. He was ceremonially",
@@ -1561,7 +1605,8 @@
                     "Y": 1.0
                 }
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -1577,10 +1622,11 @@
                 "content": "\"Khao Nom Sao\"\nKhao Nom Sao Khao Nom Sao (\u0e40\u0e02\u0e32\u0e19\u0e21\u0e2a\u0e32\u0e27), \"\"female breast mountain\"\", is a land feature located in Ranong Province, Thailand. Khao Nom Sao is the highest summit of a rugged mountain massif that stretches roughly from north to south in the Kra Isthmus. This mountain range represents an important catchment area for many rivers of the Ranong and Chumphon provinces, forming a natural border between both provinces. Khao Daen and Khao Huai Siad, are other prominent peaks of the chain, which is part of the wider Tenasserim Hills. This mountain is included in the Namtok Ngao National Park (\u0e2d\u0e38\u0e17\u0e22\u0e32\u0e19\u0e41\u0e2b\u0e48\u0e07\u0e0a\u0e32\u0e15\u0e34\u0e19\u0e49\u0e33\u0e15\u0e01\u0e2b\u0e07\u0e32\u0e27) and there",
                 "score": 80.04704284667969,
                 "doc_id": "13543122",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Sao Nang Hearn Kham\"\nand last Saopha of the state. Sao Nang Hearn Kham was the first wife of the last ruler of Yawhghwe Saopha Sao Shwe Thaik, who became the first President of Burma and with whom she had eight children. Together with her husband she participated in the 1946 - 1947 Pang Long Agreement. In post-independence Burma she became a M.P. for the constituency of Hsenwi between 1956 and 1960 and became known for her active role within the parliament. Her husband was arrested in the Burmese coup d'\u00e9tat in March 1962 by the Revolutionary Council headed by General Ne Win and",
@@ -1589,9 +1635,11 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -1610,18 +1658,21 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"Patricia Wilde\"\nwork as an educator, dancer and director\u201d Wilde was awarded the Dance Magazine Award. On August 3, 2016, she was officially inducted into the Mr. and Mrs. Cornelius Vanderbilt Whitney Dance Hall of Fame, in Saratoga Springs, New York. Wilde met George Bardyguine, a technical director and stage manager for dance from Moscow, while on tour with New York City Ballet in Spain in 1952. After marrying, they had one son, who they raised alongside Bardyguine's daughter from a previous relationship. They remained married until Bardyguine's death at 74 in 1994. Patricia Wilde Patricia Wilde (born July 16, 1928 in",
                 "score": 76.238525390625,
                 "doc_id": "20287119",
-                "fact_verification_result": true,
+                "fact_verification_result": false,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             }
-        ]
+        ],
+        "comment": "covered"
     },
     {
         "pair": [
@@ -1632,7 +1683,8 @@
             "Is Ry\u014dtar\u014d Okiayu married to Ai Maeda?",
             "Is Ai Maeda married to Ry\u014dtar\u014d Okiayu?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "No support"
     },
     {
         "pair": [
@@ -1643,7 +1695,8 @@
             "Is Manuel Bulnes married to Enriqueta Pinto Garmendia?",
             "Is Enriqueta Pinto Garmendia married to Manuel Bulnes?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "No support"
     },
     {
         "pair": [
@@ -1654,7 +1707,8 @@
             "Is Doris Harcourt married to Alexander Baring, 6th Baron Ashburton?",
             "Is Alexander Baring, 6th Baron Ashburton married to Doris Harcourt?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "support"
     },
     {
         "pair": [
@@ -1665,7 +1719,8 @@
             "Is Catherine Hicks married to Kevin Yagher?",
             "Is Kevin Yagher married to Catherine Hicks?"
         ],
-        "supports": []
+        "supports": [],
+        "comment": "support"
     },
     {
         "pair": [
@@ -1684,7 +1739,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             },
             {
                 "content": "\"William J. Tuttle\"\n\"\"The Fantasy Film Worlds of George Pal\"\" (1985), produced and directed by Arnold Leibovit. Later in life, Tuttle managed his company known as Custom Color Cosmetics. William Tuttle died, aged 95, from natural causes at his home in Pacific Palisades, California, survived by his wife, Anita and his daughter, Teresa. His remains were placed in Minneapolis, Minnesota's Lakewood Cemetery. William Tuttle was married five times. He was the first husband of Oscar-winning film and television star Donna Reed. He was survived by his daughter, Teresa, and predeceased by his son, John (both children were from his marriage to the late",
@@ -1693,7 +1749,8 @@
                 "fact_verification_result": true,
                 "fact_verification_score": {
                     "Y": 1.0
-                }
+                },
+                "selected": true
             }
         ]
     },
