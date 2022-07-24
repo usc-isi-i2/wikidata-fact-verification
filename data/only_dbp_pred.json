@@ -13,11 +13,12 @@
         "content": "\"Sandra Grant Bennett\"\nSandra Grant Bennett Sandra Grant Bennett (born 7 July 1940) is an American actress, most famous for marrying singing legend Tony Bennett and dating Joe DiMaggio for many years after he divorced Marilyn Monroe. While filming \"\"The Oscar\"\" in 1965, Grant became involved with singer Tony Bennett. After living together for several years, the couple married quietly in New York on December 29, 1971. Grant and Bennett had two daughters, Joanna (born 1970) and Antonia (born 1974). Eight years later, in 1979, Grant and Bennett separated; they legally remained married until their divorce in 2007. She also lived with Columbia",
         "score": 70.78253936767578,
         "doc_id": "10947267",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 0.7,
           "N": 0.3
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Sandra Grant Bennett\"\nPictures president David Begelman for from 1986 to 1990. In 2007 Grant announced that she was writing an autobiography. Sandra Grant Bennett Sandra Grant Bennett (born 7 July 1940) is an American actress, most famous for marrying singing legend Tony Bennett and dating Joe DiMaggio for many years after he divorced Marilyn Monroe. While filming \"\"The Oscar\"\" in 1965, Grant became involved with singer Tony Bennett. After living together for several years, the couple married quietly in New York on December 29, 1971. Grant and Bennett had two daughters, Joanna (born 1970) and Antonia (born 1974). Eight years later, in",
@@ -27,9 +28,11 @@
         "fact_verification_score": {
           "Y": 0.95,
           "N": 0.05
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -48,9 +51,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -69,9 +74,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -90,7 +97,8 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": false
       },
       {
         "content": "\"Leah D. Widtsoe\"\nbegan teaching domestic science at the Academy (now Brigham Young University). She received a bachelor's degree in pedagogy from BYU in 1898, and was later awarded an Honorary Doctor of Humanities degree in 1960. It was at Harvard that she met John A. Widtsoe, who would become her husband. On June 1, 1898 Dunford and Widtsoe were married in the Salt Lake Temple and she then went to Germany with him while he studied chemistry at the University of G\u00f6ttingen. Their first child, Ann Gaarden Widtsoe, was born in Germany. The couple went on to have eight children, but only",
@@ -99,9 +107,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -120,9 +130,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -138,10 +150,11 @@
         "content": "\"Judy Garland\"\nfive-week run in which she was paid \u00a32,500 per week, and made her last concert appearance in Copenhagen during March 1969. She married her fifth and final husband, nightclub manager Mickey Deans, at Chelsea Register Office, London, on March 15, 1969, her divorce from Herron having been finalized on February 11. Garland's close friends toward the end of her life included Lauren Bacall, Tony Bennett, Marlene Dietrich, Mickey Rooney, Mr. & Mrs. Robert F. Kennedy, and Mr. & Mrs. Peter Lawford. On June 22, 1969, Deans found Garland dead in the bathroom of their rented mews house in Cadogan Lane,",
         "score": 74.85670471191406,
         "doc_id": "690681",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Tony Steedman\"\nmarriage produced one daughter, Amanda. The marriage ended officially in 1963. Steedman's second wife was actress Judy Parfitt, whom he met in 1960 at the Birmingham Rep. They jointly ran Allerway Limited, an artistic creation company. The marriage produced a son, David, who was born in 1964. In his later life he suffered from Alzheimer's disease, which was the ultimate cause of his death on 4 February 2001. He was buried in East London Cemetery, Plaistow, London. Tony Steedman Anthony Francis Steedman (21 August 1927 \u2013 4 February 2001) was an English character actor, perhaps best known for roles in",
@@ -150,9 +163,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -163,7 +178,8 @@
       "Is Mabel Allington Royds married to Ernest Stephen Lumsden?",
       "Is Ernest Stephen Lumsden married to Mabel Allington Royds?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -182,9 +198,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": true
   },
   {
     "pair": [
@@ -195,7 +213,8 @@
       "Is Nina Pillard married to David D. Cole?",
       "Is David D. Cole married to Nina Pillard?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -214,9 +233,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -227,7 +248,8 @@
       "Is Amalia Nieto married to Felisberto Hern\u00e1ndez?",
       "Is Felisberto Hern\u00e1ndez married to Amalia Nieto?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -246,7 +268,8 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Chloe Maxwell\"\nwas a co-host on the wellness show Live Well on the Seven Network. She has recently finished her training at ABC Radio Goldcoast for on air radio broadcast and production. Chloe Maxwell attended Roseville College in Sydney's North Shore. Maxwell formed a relationship with former dual International (Union and League) ex Cronulla Sharks and Gold Coast Titans player Mat Rogers, and the couple had two children together. Rogers already had two children from a prior relationship. In 2008, Maxwell and Rogers were married at the Hyatt Regency Sanctuary Cove Resort on the Gold Coast. Maxwell and Rogers founded the charity",
@@ -255,7 +278,8 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"The Matty Johns Show\"\nChristian faith and clean image. Chloe Maxwell is a model, best known for her appearance in a series of advertisements for Jeans West. She is the wife of rugby player Mat Rogers. Sonia Kruger has also co-hosted. The guests on the show are a mix of rugby league identities and entertainment figures. For example, on the 19 August 2010 episode, Sydney Roosters player Anthony Minichiello appeared alongside Hollywood stars Will Ferrell and Mark Wahlberg. The house band is Aston, a group of six young music students from the Sydney Conservatorium of Music. Their style is to \"\"take contemporary hits and",
@@ -266,7 +290,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -277,7 +302,8 @@
       "Is Claudy Mailly married to Charles Lynch?",
       "Is Charles Lynch married to Claudy Mailly?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -296,7 +322,8 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Gerberga of Ma\u0302con\"\nthe county of M\u00e2con (through marriage to Ermentrude de Roucy, the widow of the previous count), some scholars have mistakenly argued that Gerberga must have been descended from the counts of M\u00e2con, rather than from Lambert of Chalon. Gerberga\u2019s first husband was Adalbert, King of Italy. They married around 956, and had at least two children together: After Adalbert's death in 971/5, Gerberga married for a second time, to Henry I, Duke of Burgundy, who was a younger son of Hugh the Great and Hedwig of Saxony and the younger brother of King Hugh Capet. Gerberga and Henry had no",
@@ -306,7 +333,8 @@
         "fact_verification_score": {
           "N": 0.55,
           "Y": 0.45
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Ermengarde-Gerberga of Anjou\"\nErmengarde-Gerberga of Anjou Ermengarde-Gerberga of Anjou, also called Ermengarde of Anjou ( - ), was the Countess of Rennes, Regent of Brittany (992\u2013994) and also Countess of Angoul\u00eame. Ermengarde-Gerberga was born , the daughter of Geoffrey I, Count of Anjou and Adele of Meaux. She married Conan I of Rennes, Count of Rennes, in 973. Her husband Conan of Rennes opposed her father and brother Fulk even though the marriage was apparently designed to form a political alliance between Anjou and Brittany. Even after Conan had been killed by Fulk at the Battle of Conquereuil in 992, and during the",
@@ -316,7 +344,8 @@
         "fact_verification_score": {
           "Y": 0.55,
           "N": 0.45
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Ermengarde of Burgundy\"\nErmengarde of Burgundy Ermengarde (also \"\"Hermengarde\"\", \"\"Ermengarda, Irmengarde, Irainsanda\"\", \"\"Eimildis\"\") (\u2013 after 20 September 1057) was a medieval noblewoman. Through her first marriage, to Rotbold II, Count of Provence, she was countess of Provence, and from 1011 to 1032 Ermengarde was the last queen consort of Upper Burgundy, by virtue of her second marriage to Rudolf III of Burgundy. Ermengarde\u2019s origins are obscure, and the identity of her relatives is unknown. Several scholars have, however, suggested that Ermengarde was related to Humbert of Savoy and the House of Savoy. In the nineteenth-century several scholars hypothesised that Ermengarde\u2019s first husband was",
@@ -326,7 +355,8 @@
         "fact_verification_score": {
           "Y": 0.85,
           "N": 0.15
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Ermengarde of Tours\"\nErmengarde of Tours Ermengarde of Tours (d. 20 March 851) was the daughter of Hugh of Tours, a member of the Etichonen family. In October 821 in Thionville, she married the Carolingian Emperor Lothair I of the Franks (795\u2013855). In 849, two years before her death, she made a donation to the abbey Erstein in the Elsass, in which she is buried. Lothair and Ermengarde had eight children: \"\"Her voice is as pure as gold and clear as the note of zither. Her skin is as roses mixed in snow. Her blonde hair circles her head like a chrysolith. Her",
@@ -392,7 +422,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -411,9 +442,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -432,7 +465,8 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Evan Jonigkeit\"\ncalled: \"\"Stand For Rights: A Benefit for the ACLU with Tom Hanks\"\" which ended up landing him a Primetime Emmy nomination, as well as co-producing the ESPYs. In 2017, Jonigkeit and \"\"Girls\"\" actress Zosia Mamet partnered with Refinery29 to produce an anthology series titled \"\"Fabled\"\". On October 31, 2017, Jonigkeit Starz drama \"\"Sweetbitter\"\" based on the novel of the same name. He is set to play Will the backwaiter assigned to train Tess and becomes her first friend; the series will premiere on May 6, 2018. In 2013 Jonigkeit started dating Zosia Mamet, and they subsequently got married on October",
@@ -441,9 +475,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -462,7 +498,8 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Anca Verma\"\nAnca Verma Anca Verma (born 8 August 1987) is the Romanian-born wife of arms dealer Abhishek Verma. Under her maiden name, Anca Neac\u0219u, she had a career as a supermodel in Romania before her marriage. Verma graduated from the University of Gala\u021bi with a master's degree in engineering. After leaving modelling, she joined Atlas Telecom Network Romania, a mobile service provider, and was appointed the Deputy General Manager of Bucharest operations. Upon her marriage to Abhishek Verma in 2006, she became his lieutenant in his global weapons trade and defense supplies business; in 2011 she bought into 51% equity and",
@@ -473,7 +510,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -492,9 +530,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -513,28 +553,32 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Ronda Rousey\"\nthrough her mind in the aftermath of her knockout loss to Holly Holm in November 2015. Rousey once dated fellow UFC fighter Brendan Schaub. In August 2015, Rousey was rumored to be in a relationship with UFC fighter Travis Browne, who knocked out Schaub in a bout the previous year, after a picture of the two together appeared on Twitter and Browne's estranged wife Jenna Renee Webb accused the two of seeing one another. Browne was at the time still married and under investigation by the UFC after Webb publicly accused him of domestic violence back in July. Browne confirmed",
         "score": 80.80207061767578,
         "doc_id": "12303991",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Ronda Rousey\"\nhe and Rousey were together in October 2015. The next day, Rousey revealed that she was dating Browne. Rousey and Browne got engaged on April 20, 2017 in New Zealand and married on August 28, 2017 in Browne's home state of Hawaii. In her autobiography, \"\"My Fight, Your Fight\"\", Rousey wrote of an incident with an ex-boyfriend she dubbed \"\"Snappers McCreepy\"\" after she discovered that he had taken nude photos of her without her consent or knowledge, two weeks before her first fight with Miesha Tate. Rousey wrote, \"\"I slapped him across the face so hard my hand hurt.\"\" The",
         "score": 79.72972869873047,
         "doc_id": "12303992",
-        "fact_verification_result": false,
+        "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 0.65,
           "N": 0.35
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -555,7 +599,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "skipped"
   },
   {
     "pair": [
@@ -566,7 +611,8 @@
       "Is Helen Alfredsson married to Kent Nilsson?",
       "Is Kent Nilsson married to Helen Alfredsson?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -585,9 +631,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -603,11 +651,12 @@
         "content": "\"Khaleda Zia\"\nKhaleda Zia Begum Khaleda Zia (IPA: k\u02b0aled\u032aa d\u0292ia; Majumder, born 1945) is a Bangladeshi politician who served as the Prime Minister of Bangladesh from 1991 to 1996, and again from 2001 to 2006. She was the first woman in the country's history and second in the Muslim majority countries (after Benazir Bhutto) to head a democratic government as prime minister. She was the First Lady of Bangladesh during the presidency of her husband Ziaur Rahman. She is the current chairperson and leader of the Bangladesh Nationalist Party (BNP) which was founded by Rahman in the late 1970s. After a military",
         "score": 78.57199096679688,
         "doc_id": "2395978",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 0.85,
           "N": 0.15
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Sheikh Hasina\"\nBridge Scandal, Hallmark-Sonali Bank Scam, Share market Scandal, Rana Plaza collapse, and Bangladesh road safety protests 2018. For the better part of the last two decades, Hasina's chief rival has been BNP leader Khaleda Zia, and their rivalry is popularly known as the \"\"Battle of Begums\"\". The two women have alternated as non-interim Prime Ministers since 1991. Sheikh Hasina was born in Tungipara, East Pakistan on 28 September 1947. She is the daughter of Sheikh Mujibur Rahman, first president of Bangladesh, and Sheikh Fazilatunnesa Mujib. As she said in many interviews that she had grown up in fear due to",
@@ -617,9 +666,11 @@
         "fact_verification_score": {
           "N": 0.55,
           "Y": 0.45
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -635,12 +686,14 @@
         "content": "\"Agnieszka Radwan\u0301ska\"\nwas accidentally revealed by her friend, Caroline Wozniacki, on September 7, 2016. On July 22, 2017, they got married surrounded by family, friends and her WTA and ATP peers. In attendance were Aga's younger sister Urszula, Angelique Kerber, Caroline Wozniacki, former Polish No. 1 Marta Domachowska, Alicja Rosolska, Katarzyna Piter, Wimbledon doubles Champion \u0141ukasz Kubot, Mariusz Fyrstenberg, Marcin Matkowski and also former Wimbledon semifinalist Jerzy Janowicz. The wedding ceremony took place at the Church of St Michael the Archangel and St Stanislaus Bishop and Martyr, Pauline Fathers Monastery, Ska\u0142ka, in Krakow, Poland, where Radwa\u0144ska was baptized. Radwa\u0144ska won the junior",
         "score": 76.10388946533203,
         "doc_id": "7379390",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -651,7 +704,8 @@
       "Is Lily Harmon married to Sidney Harmon?",
       "Is Sidney Harmon married to Lily Harmon?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -662,7 +716,8 @@
       "Is Dave Cantin married to Dina Manzo?",
       "Is Dina Manzo married to Dave Cantin?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No Support"
   },
   {
     "pair": [
@@ -681,7 +736,8 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Xo\u0301chitl Hamada\"\n\"\"Reina de Reinas\"\" tournament. The Hamada/Moreno feud continued into 199 where the Moreno family defeated La Migala, Miss Janeth and Hamada at that year's \"\"Rey de Reyes\"\" show. At Tripleman\u00eda VII Hamada competed in an inter-gender match against Pentag\u00f3n, her real life husband, a match she lost by disqualification when she ripped Pentag\u00f3n's mask off during the match. The Hamada / Moreno family feud kept running into the new millennia where Hamada and Pentag\u00f3n went to a double count out against Esther Moreno and El Oriental (Also a Moreno) at Tripleman\u00eda VIII in Tokyo, Japan. Her long-running feud with the",
@@ -692,7 +748,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -722,7 +779,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "skipped"
   },
   {
     "pair": [
@@ -743,7 +801,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "skipped"
   },
   {
     "pair": [
@@ -768,10 +827,11 @@
         "content": "\"Henryk IV Probus\"\nfact is disputed by modern historians. By 1288, Henry IV married secondly with Matilda (b. ca. 1270 \u2013 d. bef. 1 June 1298), daughter of Margrave Otto V \"\"the Tall\"\" of Brandenburg\u2013Salzwedel. The Professor and historian Ewa Maleczy\u0144ska alleged that the real reason of the divorce of Henry IV was that he maintain an affair with Matilda and wanted to marry her. They had no children. \"\"Piastowie. Leksykon biograficzny\"\", Cracow, 1999. Henryk IV Probus Henryk IV Probus (Latin for \"\"the Righteous\"\") ( or \"\"Prawy\"\"; ) ( \u2013 23 June 1290) was a member of the Silesian branch of the royal",
         "score": 77.08779907226562,
         "doc_id": "506682",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Beatrice of Brandenburg\"\nBeatrice's young sister Matilda married in 1287/88 with Henry IV Probus, Duke of Wroc\u0142aw and High Duke of Poland. The other two sisters are Kunigunde, who died unmarried, and Judith, married in 1303 with Rudolf I, Duke of Saxe-Wittenberg. It is probable that the wedding of Beatrice into the Silesian branch of the Piast dynasty was instrumental to Matilda's future wedding with Henry IV. One of the first tasks of Bolko I the Strict as sole Duke of \u015awidnica was protect his modest inheritance from the growing power of Henry IV Probus, Duke of Wroclaw. To that end, he decided",
@@ -789,7 +849,8 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Constance, Duchess of Wodzis\u0142aw\"\nHenry IV Probus only could have taken place between 1277 and 1278. This is based on the following considerations: In a letter of King Ottokar II of Bohemia to Bruno of Schauenburg, Bishop of Olomouc dated 15 August 1277, the King referred to his allies the Opole Dukes. Since they wanted to arrange a meeting in Racib\u00f3rz, he requests the presence of Duchess Euphemia of Opole and her daughter, calling a Congress to discuss matters relating to the wedding of W\u0142adys\u0142aw's daughter and Henry IV. The treatments of King Ottokar II were explained in his desire to obtain the support",
@@ -809,7 +870,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -820,7 +882,8 @@
       "Is John Bagni married to Gwen Bagni?",
       "Is Gwen Bagni married to John Bagni?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -841,7 +904,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "skipped"
   },
   {
     "pair": [
@@ -852,7 +916,8 @@
       "Is Adrian V. S. Hill married to Sunetra Gupta?",
       "Is Sunetra Gupta married to Adrian V. S. Hill?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -871,9 +936,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -884,7 +951,8 @@
       "Is Mike Coffman married to Cynthia Coffman?",
       "Is Cynthia Coffman married to Mike Coffman?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -895,7 +963,8 @@
       "Is April Gornik married to Eric Fischl?",
       "Is Eric Fischl married to April Gornik?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -906,7 +975,8 @@
       "Is Peter O\\'Brien married to Joanna Riding?",
       "Is Joanna Riding married to Peter O\\'Brien?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No Support"
   },
   {
     "pair": [
@@ -922,30 +992,34 @@
         "content": "\"Mukherjee-Samarth family\"\n\"\"Kuch Kuch Hota Hai\"\" (1998), \"\"Kabhi Khushi Kabhi Gham\"\" (2001) and \"\"Fanaa\"\" (2006). Her films with Shah Rukh Khan have been huge hits. Kajol is married to actor Ajay Devgn; the couple has a daughter, Nysa, and a son, Yug. For a few years, she focused on her marriage and motherhood, sidelining films. Her comeback film \"\"Fanaa\"\" (2006) with Aamir Khan was hugely successful as was her 2010 release \"\"My Name is Khan\"\". She has also acted in her husband's directorial debut \"\"U Me Aur Hum\"\" (2008). Her younger sister Tanisha, aunt Nutan, grandmother Shobhna, great-grandmother Rattan Bai and cousins",
         "score": 83.4876480102539,
         "doc_id": "7073078",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "Tanuja\nare; Chatura, an artist, and Reshma, and her brother is Jaideep, none of whom took to acting. Tanuja married filmmaker Shomu Mukherjee in 1973. The couple has two daughters, actresses Kajol and Tanisha. Kajol is married to actor Ajay Devgan. Shomu died on 10 April 2008 from a heart attack, aged 64. Filmmakers Joy, Deb and Ram are her brothers-in-law. She is the aunt of actors Mohnish Behl, Rani, and Sharbani, and director Ayan Mukherjee. She started her film career with her older sister Nutan in \"\"Hamari Beti\"\" (1950) as Baby Tanuja. As an adult, she debuted in the film",
         "score": 81.66152954101562,
         "doc_id": "5984022",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Sharbani Mukherjee\"\nSharbani Mukherjee Sharbani Mukherjee (alternate name: Sharbani Mukherji) is an Indian actress working in Bollywood and Malayalam language films. She is the daughter of Rono Mukerji and thus part of the Mukherjee-Samarth family. Her paternal uncle is Deb Mukherjee, while her late paternal uncles were Joy Mukherjee and Shomu Mukherjee. Her paternal grandfather, Sashadhar Mukherjee, was a filmmaker. His wife Satirani Devi was the sister of Ashok Kumar, Anoop Kumar and Kishore Kumar. Her cousins are actresses Rani Mukerji, Kajol and Tanisha, director Ayan Mukerji and noted MIT algebraic geometer Davesh Maulik. Her brother Samrat Mukerji is also a Bollywood",
         "score": 80.97724914550781,
         "doc_id": "6144340",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -964,7 +1038,8 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Celia Kritharioti\"\n(twice a year). She also designs sunglasses, jewelry and accessories. Celia Kritharioti Celia Kritharioti (Greek: \u03a3\u03af\u03bb\u03b9\u03b1 \u039a\u03c1\u03b9\u03b8\u03b1\u03c1\u03b9\u03ce\u03c4\u03b7) is a Greek fashion designer. She is the owner of the oldest Greek fashion house, established in 1906. Kritharioti is married to Greek shipowner Nikolas Tsakos and has three children, two of which are models in her company. Kritharioti is pinpointed in Vanity Fair UK as one of six couturiers to watch worldwide: \"\"Beautifully feminine and embellished concoctions from this couturier to the stars\"\", noted Annabel Davison, Senior Editor at Vanity Fair on Jewellery and Couture. Supporters include Jennifer Lopez, Lady Gaga, Paula",
@@ -975,7 +1050,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -994,16 +1070,18 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Priscilla Paetsch\"\nUnited States and found an openness and freedom that he had not known and stayed. She brought him out to her mothers 'Pine Springs Ranch' in Steamboat Springs, Colorado in June 1959. Priscilla McClure Johnson married G\u00fcnther Johannes Paetsch in Colorado Springs, CO on 24 May 1959 at the house of her mother. After their wedding, they went on a two-month honeymoon on the top the Continental divide the Colorado Rockies on three of her horses. One horse carried a pack of things they would need for the next 2 months. When Priscilla Paetsch was younger she wasn't really interested",
         "score": 72.43312072753906,
         "doc_id": "19760958",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Priscilla Paetsch\"\nhouse in Colorado Springs. She was ahead of the times, and as many people were schooled in a very formal environment where it was only proper to call the elders by the last names, she wanted to be called Priscilla. Priscilla Paetsch Priscilla McClure Paetsch (n\u00e9e Johnson, born November 18, 1931), is an American violinist, composer, artist, sculptor, horse trainer, and co-founder of the Paetsch Family Chamber Music Ensemble in Colorado Springs, Colorado. She is the wife of cellist G\u00fcnther Johannes Paetsch and the mother to their seven children. Priscilla McClure Johnson was born in Evanston, Illinois, United States, on",
@@ -1014,7 +1092,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -1025,7 +1104,8 @@
       "Is Pascale Roberts married to Pierre Mondy?",
       "Is Pierre Mondy married to Pascale Roberts?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -1100,7 +1180,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "Re-check"
   },
   {
     "pair": [
@@ -1116,12 +1197,14 @@
         "content": "\"Gregory Peck\"\nOn New Year's Day in 1956, the day after his divorce was finalized, Peck married Veronique Passani (1932\u20132012), a Paris news reporter who had interviewed him in 1952 before he went to Italy to film \"\"Roman Holiday\"\". He asked her to lunch six months later and they became inseparable. They had a son, Anthony Peck (b. 1956), and a daughter, Cecilia Peck (b. 1958). The couple remained married until Gregory Peck's death. His son Anthony is an ex-husband of supermodel Cheryl Tiegs. His daughter Cecilia lives in Los Angeles. Peck's eldest son, Jonathan, was found dead in his home on",
         "score": 70.23287963867188,
         "doc_id": "831833",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -1132,7 +1215,8 @@
       "Is Stephen Bradley married to Deirdre O\\'Kane?",
       "Is Deirdre O\\'Kane married to Stephen Bradley?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No Support"
   },
   {
     "pair": [
@@ -1152,9 +1236,11 @@
         "fact_verification_score": {
           "Y": 0.9,
           "N": 0.1
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -1165,7 +1251,8 @@
       "Is Tamara Kumari Ilangaratne married to T. B. Ilangaratne?",
       "Is T. B. Ilangaratne married to Tamara Kumari Ilangaratne?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -1176,7 +1263,8 @@
       "Is Kathy Corrigan married to Derek Corrigan?",
       "Is Derek Corrigan married to Kathy Corrigan?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -1187,7 +1275,8 @@
       "Is Timothy O\\'Donnell married to Mirinda Carfrae?",
       "Is Mirinda Carfrae married to Timothy O\\'Donnell?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No Support"
   },
   {
     "pair": [
@@ -1198,7 +1287,8 @@
       "Is Tezozomoc married to Tzihuacxochitzin I?",
       "Is Tzihuacxochitzin I married to Tezozomoc?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -1218,7 +1308,8 @@
         "fact_verification_score": {
           "Y": 0.35,
           "N": 0.65
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Natwar Singh\"\nhad a son, Jagat Singh (b. August 1968) and a daughter, Ritu Kaur (b. November 1970). Jagat Singh was himself politically active as the general secretary of the Congress Party youth wing. In 1993, Jagat Singh married Natasha Masri, of Jordanian and South Indian origins, in an Arya Samaj rite. Jagat and his wife separated in July 2001 after a period of estrangement. The following March, Natasha Singh's body was discovered in a terraced garden at the Delhi Hyatt Regency Hotel; it was concluded she had committed suicide by jumping from the balcony of her room. Jagat and his wife",
@@ -1228,7 +1319,8 @@
         "fact_verification_score": {
           "N": 0.75,
           "Y": 0.25
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Manmohan Singh\"\nallowing allocation of S-band spectrum without any bidding to ISRO by an agreement. The agreement was between Devas multimedia, a private firm and Antrix Corporation, a commercial wing of ISRO. He has been largely viewed as accepting the role as \"\"seat warmer\"\" for Rahul Gandhi; this was felt to have undercut the institution of the prime minister. Singh married Gursharan Kaur in 1958. They have three daughters, Upinder Singh, Daman Singh and Amrit Singh. Upinder Singh is a professor of history at Delhi University. She has written six books, including \"\"Ancient Delhi\"\" (1999) and \"\"A History of Ancient and Early",
@@ -1268,9 +1360,11 @@
         "fact_verification_score": {
           "N": 0.5,
           "Y": 0.5
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -1289,7 +1383,8 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Likelike (wife of Kalanimoku)\"\nto the Likelike Highway on Oahu. Likelike (wife of Kalanimoku) Likelike (; died March 4, 1821) was a high chiefess and member of the royal family of the Kingdom of Hawaii. Before the standardization of the Hawaiian language, her name was sometime written as Rik\u00e9riki. She was the favorite wife of Prime Minister Kalanimoku, a powerful chief and statesman during the early years of the Hawaiian monarchy, and she would accompany him on his interactions with visiting Western explorers and American missionaries to Hawaii. Likelike and her newborn son Lanihau died shortly after the baby\u2019s birth due to the shock",
@@ -1327,7 +1422,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -1376,7 +1472,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -1387,7 +1484,8 @@
       "Is Anne Heywood married to Raymond Stross?",
       "Is Raymond Stross married to Anne Heywood?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -1398,7 +1496,8 @@
       "Is Svetlana Baskova married to Anatoly Osmolovsky?",
       "Is Anatoly Osmolovsky married to Svetlana Baskova?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -1409,7 +1508,8 @@
       "Is Alice Ghostley married to Felice Orlandi?",
       "Is Felice Orlandi married to Alice Ghostley?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -1420,7 +1520,8 @@
       "Is Greta Valenti married to Robin Davey?",
       "Is Robin Davey married to Greta Valenti?"
     ],
-    "supports": []
+    "supports": [],
+    "comment": "No support"
   },
   {
     "pair": [
@@ -1439,19 +1540,22 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Skip Frye\"\nboards have slowly become collector's pieces often passed down through generations. Frye is a 2011 inductee into the Surfing Walk of Fame in Huntington Beach, California in the surf pioneer category. In May, 2017 Frye was presented with the Lifetime Achievement Award at the San Diego Surf Film Festival. Frye married his first wife, Marcia Metcalf in 1963. Together they raised their three children (Lauren - from a previous marriage, Donald - from a previous marriage, and Braden), before divorcing. Following his divorce, Frye experienced a period of personal struggle but submerged himself in his sport and his faith. In",
         "score": 75.59259796142578,
         "doc_id": "6311129",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 0.95,
           "N": 0.05
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -1470,9 +1574,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -1491,16 +1597,18 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Olga Souza\"\nBrazilian TV channel Rede Record. Souza married a Brazilian in Italy in 1990, but they divorced in 1992. In 1998, the magazine Isto \u00c9 Gente cited that Olga was the Brazilian who paid the most taxes in Italy, in reference to her fortune. In 2002, she married in Miami with the Italian businessman Gianluca Milano, with whom she lives today. In 2010, the Italian newspaper Corriere della Sera quoted that Olga's fortune was 10 million euros. In 2013, Olga said that \"\"they already have their sock\"\" with a house in the neighborhood of Morumbi in S\u00e3o Paulo, a place within",
         "score": 77.44338989257812,
         "doc_id": "5250801",
-        "fact_verification_result": true,
+        "fact_verification_result": false,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": true
       },
       {
         "content": "\"Oja Kodar\"\nOja Kodar Oja Kodar ( ; born 1941) is a Croatian actress, screenwriter and director, best known as Orson Welles's partner during the latter years of his life. Born Olga Palinka\u0161 in Zagreb to a Hungarian father and a Croatian mother, Kodar was the partner and lover of Orson Welles during the final years of his life. They met in Zagreb in 1961, when Welles was in town filming \"\"The Trial\"\". Forty-six-year-old Welles, at the time married to his third wife Paola Mori, took a liking to the twenty-year-old \"\"dark, beautiful and exotic-looking\"\" Palinka\u0161. Soon after they began their relationship,",
@@ -1511,7 +1619,8 @@
           "Y": 1.0
         }
       }
-    ]
+    ],
+    "comment": "covered"
   },
   {
     "pair": [
@@ -1530,9 +1639,11 @@
         "fact_verification_result": true,
         "fact_verification_score": {
           "Y": 1.0
-        }
+        },
+        "selected": "covered"
       }
-    ]
+    ],
+    "comment": "No support"
   },
   {
     "pair": [
