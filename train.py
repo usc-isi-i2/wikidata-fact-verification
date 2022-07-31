@@ -23,7 +23,10 @@ train_dataloader = DataLoader(my_dataset, shuffle=True, batch_size=1)
 optimizer = Adafactor(model.parameters(), scale_parameter=True, relative_step=True, warmup_init=True, lr=None)
 lr_scheduler = AdafactorSchedule(optimizer)
 
-trainer = UnifiedQATrainer(model, tokenizer, my_dataset, my_dataset, optimizer, lr_scheduler)
+trainer = UnifiedQATrainer(model, tokenizer, my_dataset, my_dataset, optimizer, lr_scheduler, device)
+
+print(f'Pre fine-tuning evaluations:')
+trainer.evaluate('train', trainer.train_dataloader)
 
 for epoch in range(5):
     print('-' * 50)
