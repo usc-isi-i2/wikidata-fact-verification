@@ -1,40 +1,49 @@
+import argparse
+
 from accelerate import Accelerator
-from torch.utils.data import DataLoader
+from transformers import Adafactor
 from transformers import T5Tokenizer, T5ForConditionalGeneration
-from transformers import TrainingArguments, Adafactor
 from transformers.optimization import AdafactorSchedule
 
 from src.fact_verification_dataset import MarriageFactVerificationDataset
 from src.unifiedqa_trainer import UnifiedQATrainer
 
-accelerator = Accelerator()
-device = accelerator.device
-print(f'Running on device: {device}')
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Train T5 unifiedQA model')
+    parser.add_argument('--model_size', type=str, help='T5 model size: small/base/large/3b/11b')
+    parser.add_argument('--train_dataset', type=str, help='Train dataset type: train_small/train/train_direct/train_extra_neg/train_extra_pos')
+    parser.add_argument('--train_batch_size', type=int, default=4, help='Training batch size')
+    parser.add_argument('--eval_batch_size', type=int, default=8, help='Train dataset type: train_small/train/train_direct/train_extra_neg/train_extra_pos')
+    args = parser.parse_args()
 
-model_name = "allenai/unifiedqa-v2-t5-large-1251000"
-tokenizer = T5Tokenizer.from_pretrained(model_name)
-model = T5ForConditionalGeneration.from_pretrained(model_name)
-model.to(device)
+    accelerator = Accelerator()
+    device = accelerator.device
+    print(f'Running on device: {device}')
 
-train_dataset = MarriageFactVerificationDataset('./data/unifiedQA/train.json')
-evaluation_dataset = MarriageFactVerificationDataset('./data/unifiedQA/test.json')
+    model_name = f'allenai/unifiedqa-v2-t5-{args.model_size}-1251000'
+    tokenizer = T5Tokenizer.from_pretrained(model_name)
+    model = T5ForConditionalGeneration.from_pretrained(model_name)
+    model.to(device)
 
-optimizer = Adafactor(model.parameters(), scale_parameter=True, relative_step=True, warmup_init=True, lr=None)
-lr_scheduler = AdafactorSchedule(optimizer)
+    train_dataset = MarriageFactVerificationDataset(f'./data/unifiedQA/{args.train_dataset}.json')
+    evaluation_dataset = MarriageFactVerificationDataset('./data/unifiedQA/test.json')
 
-trainer = UnifiedQATrainer(model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_scheduler, device, train_batch_size=2)
+    optimizer = Adafactor(model.parameters(), scale_parameter=True, relative_step=True, warmup_init=True, lr=None)
+    lr_scheduler = AdafactorSchedule(optimizer)
 
-print('-' * 50)
-print(f'Pre fine-tuning evaluations:')
-trainer.evaluate('train', trainer.train_dataset)
-print('-' * 10)
-trainer.evaluate('eval', trainer.evaluation_dataset)
-print('-' * 50)
+    trainer = UnifiedQATrainer(model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_scheduler, device, train_batch_size=args.train_batch_size, eval_batch_size=args.eval_batch_size)
 
-for epoch in range(5):
     print('-' * 50)
-    trainer.train(epoch)
-    print('-' * 10)
+    print(f'Pre fine-tuning evaluations:')
     trainer.evaluate('train', trainer.train_dataset)
     print('-' * 10)
     trainer.evaluate('eval', trainer.evaluation_dataset)
+    print('-' * 50)
+
+    for epoch in range(5):
+        print('-' * 50)
+        trainer.train(epoch)
+        print('-' * 10)
+        trainer.evaluate('train', trainer.train_dataset)
+        print('-' * 10)
+        trainer.evaluate('eval', trainer.evaluation_dataset)
