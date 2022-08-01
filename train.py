@@ -58,4 +58,4 @@ if __name__ == '__main__':
         print('-' * 10)
         trainer.evaluate(epoch, 'train', trainer.train_dataset, logfile)
         print('-' * 10)
-        trainer.evaluate(epoch, 'eval', trainer.evaluation_dataset)
+        trainer.evaluate(epoch, 'eval', trainer.evaluation_dataset, logfile)
