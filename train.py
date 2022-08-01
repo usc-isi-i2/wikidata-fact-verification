@@ -38,7 +38,7 @@ if __name__ == '__main__':
     trainer = UnifiedQATrainer(model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_scheduler, device, train_batch_size=args.train_batch_size, eval_batch_size=args.eval_batch_size)
 
     config_string = f'Run configurations: model={model_name} train={train_file} eval={evaluation_file} train_batch={args.train_batch_size} eval_batch={args.eval_batch_size} epochs={args.epochs}'
-    logfile = f'model-{model_name}_train-{args.train_dataset}_train-batch-{args.train_batch_size}_epochs-{args.epochs}.log'
+    logfile = f'model-{args.model_size}_train-{args.train_dataset}_train-batch-{args.train_batch_size}_epochs-{args.epochs}.log'
     with open(logfile, 'w') as f:
         f.write(config_string + '\n')
         f.write(f'Dataset\tEpoch\tPrecision\tRecall\tF1\tAccuracy\n')
