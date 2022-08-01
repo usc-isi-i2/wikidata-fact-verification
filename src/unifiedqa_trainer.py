@@ -62,9 +62,9 @@ class UnifiedQATrainer:
             fp += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == 'no' and pred == 'yes'])
             fn += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == 'yes' and pred == 'no'])
 
-        precision = tp / (tp + fp)
-        recall = tp / (tp + fn)
-        f1 = (2 * precision * recall) / (precision + recall)
+        precision = tp / (tp + fp) if (tp + fp) else 'Error: tp + fp is 0'
+        recall = tp / (tp + fn) if (tp + fn) else 'Error: tp + fn is 0'
+        f1 = (2 * precision * recall) / (precision + recall) if (precision and recall) else 'Error: Precision or/and Recall is 0'
         accuracy = correct / total
         print(f'\nprecision: {precision}, recall: {recall}, F1: {f1}, accuracy: {accuracy}')
         with open(LOG_FILE, 'a') as f:
