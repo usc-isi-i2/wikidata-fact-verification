@@ -25,14 +25,19 @@ if __name__ == '__main__':
     model = T5ForConditionalGeneration.from_pretrained(model_name)
     model.to(device)
 
-    train_dataset = MarriageFactVerificationDataset(f'./data/unifiedQA/{args.train_dataset}.json')
-    evaluation_dataset = MarriageFactVerificationDataset('./data/unifiedQA/test.json')
+    train_file = f'./data/unifiedQA/{args.train_dataset}.json'
+    train_dataset = MarriageFactVerificationDataset(train_file)
+
+    evaluation_file = './data/unifiedQA/test.json'
+    evaluation_dataset = MarriageFactVerificationDataset(evaluation_file)
 
     optimizer = Adafactor(model.parameters(), scale_parameter=True, relative_step=True, warmup_init=True, lr=None)
     lr_scheduler = AdafactorSchedule(optimizer)
 
     trainer = UnifiedQATrainer(model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_scheduler, device, train_batch_size=args.train_batch_size, eval_batch_size=args.eval_batch_size)
 
+    print('-' * 50)
+    print(f'Run configurations: model={model_name} train={train_file} eval={evaluation_file} train_batch={args.train_batch_size} eval_batch={args.eval_batch_size}')
     print('-' * 50)
     print(f'Pre fine-tuning evaluations:')
     trainer.evaluate('train', trainer.train_dataset)

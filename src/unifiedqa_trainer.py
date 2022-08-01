@@ -7,7 +7,7 @@ max_target_length = 128
 
 
 class UnifiedQATrainer:
-    def __init__(self, model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_schedular, device='cpu', train_batch_size=4, eval_batch_size=8):
+    def __init__(self, model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_schedular, device, train_batch_size, eval_batch_size):
         self.model = model
         self.train_dataset = train_dataset
         self.tokenizer = tokenizer
