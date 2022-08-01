@@ -39,7 +39,8 @@ if __name__ == '__main__':
     trainer = UnifiedQATrainer(model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_scheduler, device, train_batch_size=args.train_batch_size, eval_batch_size=args.eval_batch_size)
 
     config_string = f'Run configurations: model={model_name} train={train_file} eval={evaluation_file} train_batch={args.train_batch_size} eval_batch={args.eval_batch_size} epochs={args.epochs}'
-    with open(LOG_FILE, 'w') as f:
+    logfile = f'model-{model_name}_train-{args.train_dataset}_train-batch-{args.train_batch_size}_epochs-{args.epochs}.log'
+    with open(logfile, 'w') as f:
         f.write(config_string + '\n')
         f.write(f'Dataset\tEpoch\tPrecision\tRecall\tF1\tAccuracy\n')
 
@@ -47,15 +48,15 @@ if __name__ == '__main__':
     print(config_string)
     print('-' * 50)
     print(f'Pre fine-tuning evaluations:')
-    trainer.evaluate(-1, 'train', trainer.train_dataset)
+    trainer.evaluate(-1, 'train', trainer.train_dataset, logfile)
     print('-' * 10)
-    trainer.evaluate(-1, 'eval', trainer.evaluation_dataset)
+    trainer.evaluate(-1, 'eval', trainer.evaluation_dataset, logfile)
     print('-' * 50)
 
     for epoch in range(args.epochs):
         print('-' * 50)
         trainer.train(epoch)
         print('-' * 10)
-        trainer.evaluate(epoch, 'train', trainer.train_dataset)
+        trainer.evaluate(epoch, 'train', trainer.train_dataset, logfile)
         print('-' * 10)
         trainer.evaluate(epoch, 'eval', trainer.evaluation_dataset)
