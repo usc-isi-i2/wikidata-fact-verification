@@ -11,9 +11,4 @@ class MarriageFactVerificationDataset(Dataset):
         return len(self.facts)
 
     def __getitem__(self, index):
-        fact = self.facts[index]
-        person_one, person_two = fact[0]
-        output = 'yes' if fact[2] else 'no'
-        evidence = fact[3].replace('\n', ' ')
-        fact_evidence = f'Is {person_one} married to {person_two}?\n{evidence}'
-        return {"input": fact_evidence, "output": output}
+        return self.facts[index]

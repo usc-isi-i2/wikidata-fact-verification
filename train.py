@@ -16,19 +16,20 @@ tokenizer = T5Tokenizer.from_pretrained(model_name)
 model = T5ForConditionalGeneration.from_pretrained(model_name)
 model.to(device)
 
-training_args = TrainingArguments(output_dir="test_trainer", evaluation_strategy="epoch")
-my_dataset = MarriageFactVerificationDataset('./data/ground_truth/spouse_fact_validation_gt.json')
-train_dataloader = DataLoader(my_dataset, shuffle=True, batch_size=1)
+train_dataset = MarriageFactVerificationDataset('./data/unifiedQA/train.json')
+evaluation_dataset = MarriageFactVerificationDataset('./data/unifiedQA/test.json')
 
 optimizer = Adafactor(model.parameters(), scale_parameter=True, relative_step=True, warmup_init=True, lr=None)
 lr_scheduler = AdafactorSchedule(optimizer)
 
-trainer = UnifiedQATrainer(model, tokenizer, my_dataset, my_dataset, optimizer, lr_scheduler, device)
+trainer = UnifiedQATrainer(model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_scheduler, device)
 
 print(f'Pre fine-tuning evaluations:')
 trainer.evaluate('train', trainer.train_dataloader)
+trainer.evaluate('eval', trainer.evaluation_dataloader)
 
 for epoch in range(5):
     print('-' * 50)
     trainer.train(epoch)
     trainer.evaluate('train', trainer.train_dataloader)
+    trainer.evaluate('eval', trainer.evaluation_dataloader)
