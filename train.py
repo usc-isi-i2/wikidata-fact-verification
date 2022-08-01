@@ -12,7 +12,7 @@ from src.unifiedqa_trainer import UnifiedQATrainer
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train T5 unifiedQA model')
     parser.add_argument('--model_size', type=str, help='T5 model size: small/base/large/3b/11b')
-    parser.add_argument('--train_dataset', type=str, help='Train dataset type: train_small/train/train_direct/train_extra_neg/train_extra_pos')
+    parser.add_argument('--train_dataset', type=str, help='Train dataset type: train filename in data/unifiedQA (excluding .json)')
     parser.add_argument('--epochs', type=int, default=30, help='Number of training epochs')
     parser.add_argument('--train_batch_size', type=int, default=4, help='Training batch size')
     parser.add_argument('--eval_batch_size', type=int, default=8, help='Train dataset type: train_small/train/train_direct/train_extra_neg/train_extra_pos')
