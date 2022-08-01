@@ -5,6 +5,7 @@ from transformers import Adafactor
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers.optimization import AdafactorSchedule
 
+from configs import LOG_FILE
 from src.fact_verification_dataset import MarriageFactVerificationDataset
 from src.unifiedqa_trainer import UnifiedQATrainer
 
@@ -12,6 +13,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train T5 unifiedQA model')
     parser.add_argument('--model_size', type=str, help='T5 model size: small/base/large/3b/11b')
     parser.add_argument('--train_dataset', type=str, help='Train dataset type: train_small/train/train_direct/train_extra_neg/train_extra_pos')
+    parser.add_argument('--epochs', type=int, default=30, help='Number of training epochs')
     parser.add_argument('--train_batch_size', type=int, default=4, help='Training batch size')
     parser.add_argument('--eval_batch_size', type=int, default=8, help='Train dataset type: train_small/train/train_direct/train_extra_neg/train_extra_pos')
     args = parser.parse_args()
@@ -36,19 +38,24 @@ if __name__ == '__main__':
 
     trainer = UnifiedQATrainer(model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_scheduler, device, train_batch_size=args.train_batch_size, eval_batch_size=args.eval_batch_size)
 
+    config_string = f'Run configurations: model={model_name} train={train_file} eval={evaluation_file} train_batch={args.train_batch_size} eval_batch={args.eval_batch_size} epochs={args.epochs}'
+    with open(LOG_FILE, 'w') as f:
+        f.write(config_string + '\n')
+        f.write(f'Dataset\tEpoch\tPrecision\tRecall\tF1\tAccuracy\n')
+
     print('-' * 50)
-    print(f'Run configurations: model={model_name} train={train_file} eval={evaluation_file} train_batch={args.train_batch_size} eval_batch={args.eval_batch_size}')
+    print(config_string)
     print('-' * 50)
     print(f'Pre fine-tuning evaluations:')
-    trainer.evaluate('train', trainer.train_dataset)
+    trainer.evaluate(-1, 'train', trainer.train_dataset)
     print('-' * 10)
-    trainer.evaluate('eval', trainer.evaluation_dataset)
+    trainer.evaluate(-1, 'eval', trainer.evaluation_dataset)
     print('-' * 50)
 
-    for epoch in range(5):
+    for epoch in range(args.epochs):
         print('-' * 50)
         trainer.train(epoch)
         print('-' * 10)
-        trainer.evaluate('train', trainer.train_dataset)
+        trainer.evaluate(epoch, 'train', trainer.train_dataset)
         print('-' * 10)
-        trainer.evaluate('eval', trainer.evaluation_dataset)
+        trainer.evaluate(epoch, 'eval', trainer.evaluation_dataset)

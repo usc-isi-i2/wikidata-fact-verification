@@ -2,6 +2,8 @@ import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
+from configs import LOG_FILE
+
 max_source_length = 512
 max_target_length = 128
 
@@ -42,7 +44,7 @@ class UnifiedQATrainer:
 
         print(f'\nTotal loss: epoch {epoch}: {total_loss}')
 
-    def evaluate(self, dataset_name, dataset):
+    def evaluate(self, epoch, dataset_name, dataset):
         print(f'Evaluating dataset: {dataset_name}')
         total, correct, tp, tn, fp, fn = len(dataset), 0, 0, 0, 0, 0
 
@@ -65,3 +67,5 @@ class UnifiedQATrainer:
         f1 = (2 * precision * recall) / (precision + recall)
         accuracy = correct / total
         print(f'\nprecision: {precision}, recall: {recall}, F1: {f1}, accuracy: {accuracy}')
+        with open(LOG_FILE, 'a') as f:
+            f.write(f'{dataset_name}\t{epoch}\t{precision}\t{recall}\t{f1}\t{accuracy}\n')
