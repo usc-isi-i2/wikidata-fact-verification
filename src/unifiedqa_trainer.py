@@ -7,13 +7,13 @@ max_target_length = 128
 
 
 class UnifiedQATrainer:
-    def __init__(self, model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_schedular, device='cpu', batch_size=1):
+    def __init__(self, model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_schedular, device='cpu', train_batch_size=2, eval_batch_size=32):
         self.model = model
         self.train_dataset = train_dataset
         self.tokenizer = tokenizer
         self.evaluation_dataset = evaluation_dataset
-        self.train_dataloader = DataLoader(train_dataset, shuffle=True, batch_size=batch_size)
-        self.evaluation_dataloader = DataLoader(evaluation_dataset, shuffle=False, batch_size=batch_size)
+        self.train_batch_size = train_batch_size
+        self.eval_batch_size = eval_batch_size
         self.optimizer = optimizer
         self.lr_schedular = lr_schedular
         self.device = device
@@ -21,7 +21,8 @@ class UnifiedQATrainer:
     def train(self, epoch):
         total_loss = 0
         print(f'Starting training: epoch {epoch}')
-        for batch in tqdm(self.train_dataloader):
+        dataloader = DataLoader(self.train_dataset, shuffle=True, batch_size=self.train_batch_size)
+        for batch in tqdm(dataloader):
             encoding = self.tokenizer(batch['input'], padding="longest", max_length=max_source_length, truncation=True, return_tensors="pt")
             input_ids, attention_mask = encoding.input_ids, encoding.attention_mask
 
@@ -41,9 +42,11 @@ class UnifiedQATrainer:
 
         print(f'\nTotal loss: epoch {epoch}: {total_loss}')
 
-    def evaluate(self, dataset_name, dataloader):
+    def evaluate(self, dataset_name, dataset):
         print(f'Evaluating dataset: {dataset_name}')
-        total, correct, tp, tn, fp, fn = len(dataloader.dataset), 0, 0, 0, 0, 0
+        total, correct, tp, tn, fp, fn = len(dataset), 0, 0, 0, 0, 0
+
+        dataloader = DataLoader(dataset, shuffle=True, batch_size=self.eval_batch_size)
         for batch in tqdm(dataloader):
             encoding = self.tokenizer(batch['input'], padding="longest", max_length=max_source_length, truncation=True, return_tensors="pt")
             input_ids, attention_mask = encoding.input_ids, encoding.attention_mask

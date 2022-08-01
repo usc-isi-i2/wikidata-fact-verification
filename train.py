@@ -22,19 +22,19 @@ evaluation_dataset = MarriageFactVerificationDataset('./data/unifiedQA/test.json
 optimizer = Adafactor(model.parameters(), scale_parameter=True, relative_step=True, warmup_init=True, lr=None)
 lr_scheduler = AdafactorSchedule(optimizer)
 
-trainer = UnifiedQATrainer(model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_scheduler, device, 6)
+trainer = UnifiedQATrainer(model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_scheduler, device, train_batch_size=2)
 
 print('-' * 50)
 print(f'Pre fine-tuning evaluations:')
-trainer.evaluate('train', trainer.train_dataloader)
+trainer.evaluate('train', trainer.train_dataset)
 print('-' * 10)
-trainer.evaluate('eval', trainer.evaluation_dataloader)
+trainer.evaluate('eval', trainer.evaluation_dataset)
 print('-' * 50)
 
 for epoch in range(5):
     print('-' * 50)
     trainer.train(epoch)
     print('-' * 10)
-    trainer.evaluate('train', trainer.train_dataloader)
+    trainer.evaluate('train', trainer.train_dataset)
     print('-' * 10)
-    trainer.evaluate('eval', trainer.evaluation_dataloader)
+    trainer.evaluate('eval', trainer.evaluation_dataset)
