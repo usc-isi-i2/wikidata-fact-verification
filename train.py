@@ -5,7 +5,6 @@ from transformers import Adafactor
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers.optimization import AdafactorSchedule
 
-from configs import LOG_FILE
 from src.fact_verification_dataset import MarriageFactVerificationDataset
 from src.unifiedqa_trainer import UnifiedQATrainer
 
