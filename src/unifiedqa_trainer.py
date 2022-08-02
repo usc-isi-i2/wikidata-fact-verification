@@ -1,6 +1,7 @@
 import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
+import pandas as pd
 
 max_source_length = 512
 max_target_length = 128
@@ -48,6 +49,7 @@ class UnifiedQATrainer:
         total, correct, tp, tn, fp, fn = len(dataset), 0, 0, 0, 0, 0
 
         dataloader = DataLoader(dataset, shuffle=True, batch_size=self.eval_batch_size)
+        predictions_to_save = []
         for batch in tqdm(dataloader):
             encoding = self.tokenizer(batch['input'], padding="longest", max_length=max_source_length, truncation=True, return_tensors="pt")
             input_ids, attention_mask = encoding.input_ids, encoding.attention_mask
@@ -60,6 +62,10 @@ class UnifiedQATrainer:
             tn += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred == 'no'])
             fp += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == 'no' and pred == 'yes'])
             fn += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == 'yes' and pred == 'no'])
+
+            if dataset_name == 'eval':
+                for ip, label, pred in zip(batch['input'], batch['output'], predictions):
+                    predictions_to_save.append((ip, label, pred, label == pred))
 
         precision = tp / (tp + fp) if (tp + fp) else 'Error: tp + fp is 0'
         recall = tp / (tp + fn) if (tp + fn) else 'Error: tp + fn is 0'
@@ -76,3 +82,5 @@ class UnifiedQATrainer:
             self.best_score = accuracy
             print(f'Saving model with accuracy: {accuracy} on {dataset_name} at epoch {epoch}')
             self.model.save_pretrained(f'./data/model_{epoch}.pt')
+            results_df = pd.DataFrame(predictions_to_save, columns=['Input', 'Correct', 'Prediction', 'Is Correct prediction'])
+            results_df.to_excel(f'./data/predicted/predictions_{epoch}.xlsx', index=False)
