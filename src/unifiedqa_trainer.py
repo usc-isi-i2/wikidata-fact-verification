@@ -17,6 +17,7 @@ class UnifiedQATrainer:
         self.optimizer = optimizer
         self.lr_schedular = lr_schedular
         self.device = device
+        self.best_score = 0
 
     def train(self, epoch):
         total_loss = 0
@@ -67,3 +68,11 @@ class UnifiedQATrainer:
         print(f'\nprecision: {precision}, recall: {recall}, F1: {f1}, accuracy: {accuracy}')
         with open(logfile, 'a') as f:
             f.write(f'{dataset_name}\t{epoch}\t{precision}\t{recall}\t{f1}\t{accuracy}\n')
+
+        if epoch == -1 or dataset_name == 'train':
+            return
+
+        if accuracy > self.best_score:
+            self.best_score = accuracy
+            print(f'Saving model with accuracy: {accuracy} on {dataset_name} at epoch {epoch}')
+            self.model.save_pretrained(f'./data/model_{epoch}.pt')
