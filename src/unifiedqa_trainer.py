@@ -81,6 +81,6 @@ class UnifiedQATrainer:
         if accuracy > self.best_score:
             self.best_score = accuracy
             print(f'Saving model with accuracy: {accuracy} on {dataset_name} at epoch {epoch}')
-            self.model.save_pretrained(f'./data/model_{epoch}.pt')
+            self.model.save_pretrained(f'./data/fine_tuned_model_{epoch}')
             results_df = pd.DataFrame(predictions_to_save, columns=['Input', 'Correct', 'Prediction', 'Is Correct prediction'])
             results_df.to_excel(f'./data/predicted/predictions_{epoch}.xlsx', index=False)
