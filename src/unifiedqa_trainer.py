@@ -8,11 +8,11 @@ max_target_length = 128
 
 
 class UnifiedQATrainer:
-    def __init__(self, model, tokenizer, train_dataset, evaluation_dataset, optimizer, lr_schedular, device, train_batch_size, eval_batch_size):
+    def __init__(self, run_files, model, tokenizer, train_dataset, optimizer, lr_schedular, device, train_batch_size, eval_batch_size):
+        self.run_files = run_files
         self.model = model
         self.train_dataset = train_dataset
         self.tokenizer = tokenizer
-        self.evaluation_dataset = evaluation_dataset
         self.train_batch_size = train_batch_size
         self.eval_batch_size = eval_batch_size
         self.optimizer = optimizer
@@ -63,7 +63,7 @@ class UnifiedQATrainer:
             fp += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == 'no' and pred == 'yes'])
             fn += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == 'yes' and pred == 'no'])
 
-            if dataset_name == 'eval':
+            if dataset_name != 'train':
                 for ip, label, pred in zip(batch['input'], batch['output'], predictions):
                     predictions_to_save.append((ip, label, pred, label == pred))
 
@@ -71,16 +71,17 @@ class UnifiedQATrainer:
         recall = tp / (tp + fn) if (tp + fn) else 'Error: tp + fn is 0'
         f1 = (2 * precision * recall) / (precision + recall) if (precision and recall) else 'Error: Precision or/and Recall is 0'
         accuracy = correct / total
+        print(f'\ntp: {tp}, fp: {fp}, tn: {tn}, fn: {fn}')
         print(f'\nprecision: {precision}, recall: {recall}, F1: {f1}, accuracy: {accuracy}')
         with open(logfile, 'a') as f:
             f.write(f'{dataset_name}\t{epoch}\t{precision}\t{recall}\t{f1}\t{accuracy}\n')
 
-        if epoch == -1 or dataset_name == 'train':
+        results_df = pd.DataFrame(predictions_to_save, columns=['Input', 'Correct', 'Prediction', 'Is Correct prediction'])
+        results_df.to_excel(f'{self.run_files}/predictions_{dataset_name}_{"pretrained" if epoch == -1 else epoch}.xlsx', index=False)
+        if epoch == -1 or dataset_name != 'eval':
             return
 
         if accuracy > self.best_score:
             self.best_score = accuracy
             print(f'Saving model with accuracy: {accuracy} on {dataset_name} at epoch {epoch}')
-            self.model.save_pretrained(f'./data/fine_tuned_model_{epoch}')
-            results_df = pd.DataFrame(predictions_to_save, columns=['Input', 'Correct', 'Prediction', 'Is Correct prediction'])
-            results_df.to_excel(f'./data/predicted/predictions_{epoch}.xlsx', index=False)
+            self.model.save_pretrained(f'{self.run_files}/fine_tuned_model_{epoch}')
