@@ -5,7 +5,6 @@ from transformers import Adafactor
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers.optimization import AdafactorSchedule
 
-from src.common_sense_dataset import CommonSenseEvalDataset
 from src.fact_verification_dataset import MarriageFactVerificationDataset
 from src.unifiedqa_trainer import UnifiedQATrainer
 from src.utils import prepare_run_files_directory
@@ -37,7 +36,7 @@ if __name__ == '__main__':
     datasets = {
         'train': MarriageFactVerificationDataset(train_file),
         'eval': MarriageFactVerificationDataset(evaluation_file),
-        'common_sense': CommonSenseEvalDataset()
+        'common_sense': MarriageFactVerificationDataset()
     }
 
     optimizer = Adafactor(model.parameters(), scale_parameter=True, relative_step=True, warmup_init=True, lr=None)

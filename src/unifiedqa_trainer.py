@@ -1,7 +1,11 @@
+from collections import defaultdict
+
 import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 import pandas as pd
+
+from src.utils import delete_dir
 
 max_source_length = 512
 max_target_length = 128
@@ -18,7 +22,7 @@ class UnifiedQATrainer:
         self.optimizer = optimizer
         self.lr_schedular = lr_schedular
         self.device = device
-        self.best_score = 0
+        self.best_score = defaultdict(lambda: 0)
 
     def train(self, epoch):
         total_loss = 0
@@ -81,7 +85,9 @@ class UnifiedQATrainer:
         if epoch == -1 or dataset_name != 'eval':
             return
 
-        if accuracy > self.best_score:
-            self.best_score = accuracy
-            print(f'Saving model with accuracy: {accuracy} on {dataset_name} at epoch {epoch}')
-            self.model.save_pretrained(f'{self.run_files}/fine_tuned_model_{epoch}')
+        if f1 > self.best_score[dataset_name]:
+            save_path = f'{self.run_files}/fine_tuned_model_{dataset_name}'
+            self.best_score = f1
+            delete_dir(save_path)
+            print(f'Saving best model on {dataset_name} at epoch {epoch} with F1: {f1}')
+            self.model.save_pretrained(save_path)

@@ -1,16 +1,14 @@
 from itertools import combinations
 
-from torch.utils.data import Dataset
+PERSON_ONE = '#person_one!'
+PERSON_TWO = '#person_two!'
+PERSON_THREE = '#person_three!'
+PERSON_FOUR = '#person_four!'
 
-PERSON_ONE = 'person_one'
-PERSON_TWO = 'person_two'
-PERSON_THREE = 'person_three'
-PERSON_FOUR = 'person_four'
-
-PERSON_ONE_SHORT = 'person_one_short'
-PERSON_TWO_SHORT = 'person_two_short'
-PERSON_THREE_SHORT = 'person_three_short'
-PERSON_FOUR_SHORT = 'person_four_short'
+PERSON_ONE_SHORT = '#person_one_short!'
+PERSON_TWO_SHORT = '#person_two_short!'
+PERSON_THREE_SHORT = '#person_three_short!'
+PERSON_FOUR_SHORT = '#person_four_short!'
 
 QUESTION_PERSON_1 = '#p_one!'
 QUESTION_PERSON_2 = '#p_two!'
@@ -36,19 +34,25 @@ templates = [
     {
         PAIR: [PERSON_ONE, PERSON_TWO],
         OTHERS: [],
-        EVIDENCE: f'Almost after five years of dating, #{PERSON_ONE_SHORT}! and #{PERSON_TWO_SHORT}! got married in Italy in 2018.',
+        EVIDENCE: f'Almost after five years of dating, {PERSON_ONE_SHORT} and {PERSON_TWO_SHORT} got married in Italy in 2018.',
         ANSWERABLE: True,
     },
     {
         PAIR: [PERSON_ONE, PERSON_TWO],
         OTHERS: [PERSON_THREE],
-        EVIDENCE: f'#{PERSON_ONE}!, daughter of #{PERSON_THREE}!, wed #{PERSON_TWO}! in Italy in 2018.',
+        EVIDENCE: f'{PERSON_ONE}, daughter of {PERSON_THREE}, wed {PERSON_TWO} in Italy in 2018.',
         ANSWERABLE: True
     },
     {
         PAIR: [PERSON_ONE, PERSON_TWO],
         OTHERS: [PERSON_THREE, PERSON_FOUR],
-        EVIDENCE: f'#{PERSON_THREE}!\'s cousin #{PERSON_ONE}! spouse of #{PERSON_TWO}! is flying to France for celebration of her aunt #{PERSON_FOUR}!\'s birthday.',
+        EVIDENCE: f'{PERSON_THREE}\'s cousin {PERSON_ONE} spouse of {PERSON_TWO} is flying to France for celebration of her aunt {PERSON_FOUR}\'s birthday.',
+        ANSWERABLE: True
+    },
+    {
+        PAIR: [PERSON_ONE, PERSON_TWO],
+        OTHERS: [PERSON_THREE, PERSON_FOUR],
+        EVIDENCE: f'During peek of the career, {PERSON_ONE_SHORT}, wife of {PERSON_TWO} adopted {PERSON_THREE} from {PERSON_FOUR}.',
         ANSWERABLE: True
     }
 ]
@@ -88,7 +92,7 @@ def generate_spouse_data():
     for t in templates:
         evidence = t[EVIDENCE]
         for person_key in person_key_list:
-            evidence = evidence.replace(f'#{person_key}!', names[person_key])
+            evidence = evidence.replace(f'{person_key}', names[person_key])
 
         for ques, ans in generate_data_for_template(t):
             data.append({'input': f'{ques}\n{evidence}', 'output': ans})
@@ -96,18 +100,11 @@ def generate_spouse_data():
     return data
 
 
-class CommonSenseEvalDataset(Dataset):
-    def __init__(self):
-        self.facts = generate_spouse_data()
-
-    def __len__(self):
-        return len(self.facts)
-
-    def __getitem__(self, index):
-        return self.facts[index]
-
-    def summary(self):
-        pos_fact_count = len([1 for fact in self.facts if fact['output'] == 'yes'])
-        neg_fact_count = len([1 for fact in self.facts if fact['output'] == 'no'])
-
-        return pos_fact_count, neg_fact_count
+if __name__ == '__main__':
+    for d in generate_spouse_data():
+        ips = d['input'].split('\n')
+        m_ques, m_evidence = ips[0], ' '.join(ips[1:])
+        print('-' * 40)
+        print(f'Ques: {m_ques}')
+        print(f'Evidence: {m_evidence}')
+        print(f"Ans: {d['output']}")
