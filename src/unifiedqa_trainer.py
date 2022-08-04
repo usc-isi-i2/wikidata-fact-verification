@@ -76,7 +76,8 @@ class UnifiedQATrainer:
         f1 = (2 * precision * recall) / (precision + recall) if (precision and recall) else 'Error: Precision or/and Recall is 0'
         accuracy = correct / total
         print(f'\ntp: {tp}, fp: {fp}, tn: {tn}, fn: {fn}')
-        print(f'\nprecision: {precision}, recall: {recall}, F1: {f1}, accuracy: {accuracy}')
+        score_string = f'\nprecision: {precision}, recall: {recall}, F1: {f1}, accuracy: {accuracy}'
+        print(score_string)
         with open(logfile, 'a') as f:
             f.write(f'{dataset_name}\t{epoch}\t{precision}\t{recall}\t{f1}\t{accuracy}\n')
 
@@ -92,3 +93,5 @@ class UnifiedQATrainer:
             delete_dir(save_path)
             print(f'Saving best model on {dataset_name} at epoch {epoch} with F1: {f1}')
             self.model.save_pretrained(save_path)
+            with open(f'{save_path}/score.txt', 'w') as f:
+                f.write(score_string)
