@@ -83,6 +83,7 @@ class UnifiedQATrainer:
         results_df = pd.DataFrame(predictions_to_save, columns=['Input', 'Correct', 'Prediction', 'Is Correct prediction'])
         results_df.to_excel(f'{self.run_files}/predictions_{dataset_name}_{"pretrained" if epoch == -1 else epoch}.xlsx', index=False)
         if epoch == -1 or dataset_name == 'train':
+            self.best_score[dataset_name] = f1
             return
 
         if f1 > self.best_score[dataset_name]:
