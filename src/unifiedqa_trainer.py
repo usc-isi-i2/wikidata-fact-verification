@@ -87,7 +87,7 @@ class UnifiedQATrainer:
 
         if f1 > self.best_score[dataset_name]:
             save_path = f'{self.run_files}/fine_tuned_model_{dataset_name}'
-            self.best_score = f1
+            self.best_score[dataset_name] = f1
             delete_dir(save_path)
             print(f'Saving best model on {dataset_name} at epoch {epoch} with F1: {f1}')
             self.model.save_pretrained(save_path)
