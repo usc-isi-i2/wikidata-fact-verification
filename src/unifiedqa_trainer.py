@@ -94,4 +94,5 @@ class UnifiedQATrainer:
             print(f'Saving best model on {dataset_name} at epoch {epoch} with F1: {f1}')
             self.model.save_pretrained(save_path)
             with open(f'{save_path}/score.txt', 'w') as f:
+                f.write(f'Epoch: {epoch}\n')
                 f.write(score_string)
