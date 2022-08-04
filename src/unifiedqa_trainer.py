@@ -71,9 +71,9 @@ class UnifiedQATrainer:
                 for ip, label, pred in zip(batch['input'], batch['output'], predictions):
                     predictions_to_save.append((ip, label, pred, label == pred))
 
-        precision = tp / (tp + fp) if (tp + fp) else 'Error: tp + fp is 0'
-        recall = tp / (tp + fn) if (tp + fn) else 'Error: tp + fn is 0'
-        f1 = (2 * precision * recall) / (precision + recall) if (precision and recall) else 'Error: Precision or/and Recall is 0'
+        precision = tp / (tp + fp) if (tp + fp) else 0
+        recall = tp / (tp + fn) if (tp + fn) else 0
+        f1 = (2 * precision * recall) / (precision + recall) if (precision and recall) else 0
         accuracy = correct / total
         print(f'\ntp: {tp}, fp: {fp}, tn: {tn}, fn: {fn}')
         score_string = f'\nprecision: {precision}, recall: {recall}, F1: {f1}, accuracy: {accuracy}'
