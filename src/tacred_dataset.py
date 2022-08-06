@@ -25,9 +25,9 @@ class TacredDataset(Dataset):
                 evidence = ' '.join(data["token"])
                 head_text = data['h']['name']
                 tail_text = data['t']['name']
-                desc_text = ' '.join(self.rel_description[data["relation"]][1:-1])
-                question = f'What is relation between {head_text} and {tail_text}?'
-                self.data.append({'input': f'{question}\n{evidence}', 'output': f'{head_text} {desc_text} {tail_text}.'})
+                # desc_text = ' '.join([t for t in self.rel_description[data["relation"]] if t != "'s"][1:-1])
+                question = f'What is the relation between {head_text} and {tail_text}?'
+                self.data.append({'input': f'{question}\n{evidence}', 'output': data["relation"]})
 
     def __len__(self):
         return len(self.data)
