@@ -62,13 +62,14 @@ if __name__ == '__main__':
     print('*' * 50)
     print(f'Pre fine-tuning evaluations:')
     for dataset_name, dataset in datasets.items():
-        trainer.evaluate(-1, dataset_name, dataset, logfile)
-        print('-' * 10)
+        if dataset_name in ['eval', 'common_sense']:
+            trainer.evaluate(-1, dataset_name, dataset, logfile)
+            print('-' * 10)
 
     for epoch in range(args.epochs):
         print('-' * 50)
-        trainer.train(epoch, datasets['train'])
-        trainer.train(epoch, datasets['tacred_train'])
+        trainer.train(datasets['train'], epoch)
+        trainer.train(datasets['tacred_train'], epoch)
         print('-' * 10)
         for dataset_name, dataset in datasets.items():
             trainer.evaluate(epoch, dataset_name, dataset, logfile)
