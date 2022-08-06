@@ -34,11 +34,14 @@ if __name__ == '__main__':
 
     train_file = f'./data/unifiedQA/{args.train_dataset}.json'
     evaluation_file = './data/unifiedQA/test.json'
-    datasets = {
+
+    train_datasets = {
         'train': MarriageFactVerificationDataset(train_file),
-        'tacred_train': TacredDataset('./data/tacred', 'train.txt'),
+        'tacred_train': TacredDataset('./data/tacred', 'train.txt')
+    }
+
+    eval_datasets = {
         'tacred_eval': TacredDataset('./data/tacred', 'val.txt'),
-        'tacred_test': TacredDataset('./data/tacred', 'test.txt'),
         'eval': MarriageFactVerificationDataset(evaluation_file),
         'common_sense': MarriageFactVerificationDataset()
     }
@@ -68,9 +71,9 @@ if __name__ == '__main__':
 
     for epoch in range(args.epochs):
         print('-' * 50)
-        trainer.train(datasets['train'], epoch)
-        trainer.train(datasets['tacred_train'], epoch)
+        trainer.train(train_datasets['tacred_train'], epoch)
+        trainer.train(train_datasets['train'], epoch)
         print('-' * 10)
-        for dataset_name, dataset in datasets.items():
+        for dataset_name, dataset in eval_datasets.items():
             trainer.evaluate(epoch, dataset_name, dataset, logfile)
             print('-' * 10)

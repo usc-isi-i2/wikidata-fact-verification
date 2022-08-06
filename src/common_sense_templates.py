@@ -54,6 +54,18 @@ templates = [
         OTHERS: [PERSON_THREE, PERSON_FOUR],
         EVIDENCE: f'During peek of the career, {PERSON_ONE_SHORT}, wife of {PERSON_TWO} adopted {PERSON_THREE} from {PERSON_FOUR}.',
         ANSWERABLE: True
+    },
+    {
+        PAIR: [PERSON_ONE, PERSON_TWO],
+        OTHERS: [PERSON_THREE, PERSON_FOUR],
+        EVIDENCE: '',
+        ANSWERABLE: False,
+    },
+    {
+        PAIR: [PERSON_ONE, PERSON_TWO],
+        OTHERS: [PERSON_THREE, PERSON_FOUR],
+        EVIDENCE: f'Best employee award for 2022 goes to {PERSON_ONE}, {PERSON_TWO}, {PERSON_THREE} and {PERSON_FOUR}',
+        ANSWERABLE: False,
     }
 ]
 
