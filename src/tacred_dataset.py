@@ -20,7 +20,6 @@ class TacredDataset(Dataset):
         return len(self.data)
 
     def __getitem__(self, index) -> T_co:
-        print(self.data[index])
         data = json.loads(self.data[index])
         evidence = ' '.join(data["token"])
         head_text = data['h']['name']
@@ -28,6 +27,9 @@ class TacredDataset(Dataset):
         desc_text = ' '.join(self.rel_description[data["relation"]][1:-1])
         question = f'What is relation between {head_text} and {tail_text}?'
         return {'input': f'{question}\n{evidence}', 'output': f'{head_text} {desc_text} {tail_text}.'}
+
+    def summary(self):
+        return 'multi_label_dataset', 'multi_label_dataset'
 
 
 if __name__ == '__main__':

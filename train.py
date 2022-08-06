@@ -6,6 +6,7 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers.optimization import AdafactorSchedule
 
 from src.fact_verification_dataset import MarriageFactVerificationDataset
+from src.tacred_dataset import TacredDataset
 from src.unifiedqa_trainer import UnifiedQATrainer
 from src.utils import prepare_run_files_directory
 
@@ -35,6 +36,9 @@ if __name__ == '__main__':
     evaluation_file = './data/unifiedQA/test.json'
     datasets = {
         'train': MarriageFactVerificationDataset(train_file),
+        'tacred_train': TacredDataset('./data/tacred', 'train.txt'),
+        'tacred_eval': TacredDataset('./data/tacred', 'val.txt'),
+        'tacred_test': TacredDataset('./data/tacred', 'test.txt'),
         'eval': MarriageFactVerificationDataset(evaluation_file),
         'common_sense': MarriageFactVerificationDataset()
     }
@@ -42,7 +46,7 @@ if __name__ == '__main__':
     optimizer = Adafactor(model.parameters(), scale_parameter=True, relative_step=True, warmup_init=True, lr=None)
     lr_scheduler = AdafactorSchedule(optimizer)
 
-    trainer = UnifiedQATrainer(run_files, model, tokenizer, datasets['train'], optimizer, lr_scheduler, device, train_batch_size=args.train_batch_size, eval_batch_size=args.eval_batch_size)
+    trainer = UnifiedQATrainer(run_files, model, tokenizer, optimizer, lr_scheduler, device, train_batch_size=args.train_batch_size, eval_batch_size=args.eval_batch_size)
     config_string = f'Run configurations: model={model_name} train={train_file} eval={evaluation_file} train_batch={args.train_batch_size} eval_batch={args.eval_batch_size} epochs={args.epochs}'
 
     with open(logfile, 'w') as f:
@@ -63,7 +67,8 @@ if __name__ == '__main__':
 
     for epoch in range(args.epochs):
         print('-' * 50)
-        trainer.train(epoch)
+        trainer.train(epoch, datasets['train'])
+        trainer.train(epoch, datasets['tacred_train'])
         print('-' * 10)
         for dataset_name, dataset in datasets.items():
             trainer.evaluate(epoch, dataset_name, dataset, logfile)

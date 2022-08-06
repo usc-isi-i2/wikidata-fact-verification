@@ -12,10 +12,9 @@ max_target_length = 128
 
 
 class UnifiedQATrainer:
-    def __init__(self, run_files, model, tokenizer, train_dataset, optimizer, lr_schedular, device, train_batch_size, eval_batch_size):
+    def __init__(self, run_files, model, tokenizer, optimizer, lr_schedular, device, train_batch_size, eval_batch_size):
         self.run_files = run_files
         self.model = model
-        self.train_dataset = train_dataset
         self.tokenizer = tokenizer
         self.train_batch_size = train_batch_size
         self.eval_batch_size = eval_batch_size
@@ -24,10 +23,10 @@ class UnifiedQATrainer:
         self.device = device
         self.best_score = defaultdict(lambda: 0)
 
-    def train(self, epoch):
+    def train(self, train_dataset, epoch):
         total_loss = 0
         print(f'Starting training: epoch {epoch}')
-        dataloader = DataLoader(self.train_dataset, shuffle=True, batch_size=self.train_batch_size)
+        dataloader = DataLoader(train_dataset, shuffle=True, batch_size=self.train_batch_size)
         for batch in tqdm(dataloader):
             encoding = self.tokenizer(batch['input'], padding="longest", max_length=max_source_length, truncation=True, return_tensors="pt")
             input_ids, attention_mask = encoding.input_ids, encoding.attention_mask
