@@ -59,15 +59,14 @@ if __name__ == '__main__':
     print('-' * 50)
     print(config_string)
     print('*' * 50)
-    for dataset_name, dataset in datasets.items():
+    for dataset_name, dataset in list(train_datasets.items()) + list(eval_datasets.items()):
         pos_count, neg_count = dataset.summary()
         print(f'Dataset: {dataset_name} pos_count: {pos_count} neg_count: {neg_count}')
     print('*' * 50)
     print(f'Pre fine-tuning evaluations:')
-    for dataset_name, dataset in datasets.items():
-        if dataset_name in ['eval', 'common_sense']:
-            trainer.evaluate(-1, dataset_name, dataset, logfile)
-            print('-' * 10)
+    for dataset_name, dataset in eval_datasets.items():
+        trainer.evaluate(-1, dataset_name, dataset, logfile)
+        print('-' * 10)
 
     for epoch in range(args.epochs):
         print('-' * 50)
