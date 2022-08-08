@@ -2,7 +2,7 @@ import json
 
 from torch.utils.data import Dataset
 
-from src.common_sense_templates import generate_spouse_data
+from src.anchor_templates import generate_spouse_data
 
 
 class MarriageFactVerificationDataset(Dataset):

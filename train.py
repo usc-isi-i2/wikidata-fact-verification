@@ -1,59 +1,60 @@
 import argparse
+import json
+import os.path
 
 from accelerate import Accelerator
+from torch.utils.data import ConcatDataset, DataLoader
 from transformers import Adafactor
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers.optimization import AdafactorSchedule
 
-from src.fact_verification_dataset import MarriageFactVerificationDataset
-from src.tacred_dataset import TacredDataset
+from datasets import get_dataset_functions
 from src.unifiedqa_trainer import UnifiedQATrainer
 from src.utils import prepare_run_files_directory
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train T5 unifiedQA model')
-    parser.add_argument('--model_size', type=str, help='T5 model size: small/base/large/3b/11b')
-    parser.add_argument('--train_dataset', type=str, help='Train dataset type: train filename in data/unifiedQA (excluding .json)')
-    parser.add_argument('--epochs', type=int, default=20, help='Number of training epochs')
-    parser.add_argument('--train_batch_size', type=int, default=8, help='Training batch size')
-    parser.add_argument('--eval_batch_size', type=int, default=16, help='Eval batch size')
+    parser.add_argument('--experiment', type=str, default='check', help='Experiment to run from experiments/config/exp_<experiment.json')
     args = parser.parse_args()
+
+    with open(os.path.join('experiments/configs', f'exp_{args.experiment}.json')) as f:
+        configs = json.load(f)
+
+    model_size = configs['model']['size']
 
     run_files = './run_files'
     prepare_run_files_directory(run_files)
-    logfile = f'{run_files}/model-{args.model_size}_train-{args.train_dataset}_train-batch-{args.train_batch_size}_epochs-{args.epochs}.log'
+
+    logfile = os.path.join(f'experiments/logs/exp_{args.experiment}.tsv')
 
     accelerator = Accelerator()
     device = accelerator.device
     print(f'Running on device: {device}')
 
-    model_name = f'allenai/unifiedqa-v2-t5-{args.model_size}-1251000'
+    model_name = f'allenai/unifiedqa-v2-t5-{model_size}-1251000'
     tokenizer = T5Tokenizer.from_pretrained(model_name)
     model = T5ForConditionalGeneration.from_pretrained(model_name)
     model.to(device)
 
-    train_file = f'./data/unifiedQA/{args.train_dataset}.json'
-    evaluation_file = './data/unifiedQA/test.json'
+    train_datasets = {}
+    for dataset in configs['train_datasets']:
+        dataset_type, dataset_name = dataset.split(':')
+        train_datasets[dataset] = get_dataset_functions[dataset_type](dataset_name)
 
-    train_datasets = {
-        'train': MarriageFactVerificationDataset(train_file),
-        'tacred_train': TacredDataset('./data/tacred', 'train.txt')
-    }
+    train_dataloader = DataLoader(ConcatDataset(train_datasets.values()), shuffle=True, batch_size=configs['train_batch_size'])
 
-    eval_datasets = {
-        'tacred_eval': TacredDataset('./data/tacred', 'val.txt'),
-        'eval': MarriageFactVerificationDataset(evaluation_file),
-        'common_sense': MarriageFactVerificationDataset()
-    }
+    eval_datasets = {}
+    for dataset in configs['eval_datasets']:
+        dataset_type, dataset_name = dataset.split(':')
+        eval_datasets[dataset] = get_dataset_functions[dataset_type](dataset_name)
 
     optimizer = Adafactor(model.parameters(), scale_parameter=True, relative_step=True, warmup_init=True, lr=None)
     lr_scheduler = AdafactorSchedule(optimizer)
 
-    trainer = UnifiedQATrainer(run_files, model, tokenizer, optimizer, lr_scheduler, device, train_batch_size=args.train_batch_size, eval_batch_size=args.eval_batch_size)
-    config_string = f'Run configurations: model={model_name} train={train_file} eval={evaluation_file} train_batch={args.train_batch_size} eval_batch={args.eval_batch_size} epochs={args.epochs}'
+    trainer = UnifiedQATrainer(run_files, model, tokenizer, optimizer, lr_scheduler, device, eval_batch_size=configs['eval_batch_size'])
+    config_string = f'Run configs from experiments/configs/exp_{args.experiment}.json: {configs}'
 
     with open(logfile, 'w') as f:
-        f.write(config_string + '\n')
         f.write(f'Dataset\tEpoch\tPrecision\tRecall\tF1\tAccuracy\n')
 
     print('-' * 50)
@@ -63,15 +64,16 @@ if __name__ == '__main__':
         pos_count, neg_count = dataset.summary()
         print(f'Dataset: {dataset_name} pos_count: {pos_count} neg_count: {neg_count}')
     print('*' * 50)
+
     print(f'Pre fine-tuning evaluations:')
     for dataset_name, dataset in eval_datasets.items():
         trainer.evaluate(-1, dataset_name, dataset, logfile)
         print('-' * 10)
 
-    for epoch in range(args.epochs):
+    for epoch in range(configs['epochs']):
         print('-' * 50)
-        trainer.train(train_datasets['tacred_train'], epoch)
-        trainer.train(train_datasets['train'], epoch)
+        trainer.train(train_dataloader, epoch)
+        # trainer.train(train_datasets['train'], epoch)
         print('-' * 10)
         for dataset_name, dataset in eval_datasets.items():
             trainer.evaluate(epoch, dataset_name, dataset, logfile)

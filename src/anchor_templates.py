@@ -71,7 +71,7 @@ templates = [
 
 question_templates = [
     f'Is {QUESTION_PERSON_1} married to {QUESTION_PERSON_2}?',
-    f'Is {QUESTION_PERSON_1} spouse of {QUESTION_PERSON_2}?',
+    # f'Is {QUESTION_PERSON_1} spouse of {QUESTION_PERSON_2}?',
 ]
 
 
