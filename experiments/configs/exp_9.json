@@ -1,9 +1,9 @@
 {
-  "epochs": 3,
-  "train_batch_size": 2,
-  "eval_batch_size": 4,
+  "epochs": 20,
+  "train_batch_size": 8,
+  "eval_batch_size": 16,
   "model": {
-    "size": "small"
+    "size": "base"
   },
   "train_datasets": [
     "tacred:train",
