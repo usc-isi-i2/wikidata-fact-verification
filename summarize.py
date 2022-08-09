@@ -54,24 +54,24 @@ if __name__ == '__main__':
                 results[(i, int(log_list[metric_indexes[EPOCH]]))][log_list[metric_indexes[DATASET]]] = float(log_list[metric_indexes[F1]])
 
     with open('summary.tsv', 'w') as f:
-        header_list = ['Experiment'] + list(train_datasets) + [EPOCH] + list(eval_datasets)
+        header_list = ['Experiment', 'Model'] + list(train_datasets) + [EPOCH] + list(eval_datasets)
         f.write('\t'.join(header_list))
         f.write('\n')
 
         for (exp, epoch), values in results.items():
-            summary = [exp]
+            summary = [exp, configs[exp]['model']['size']]
             for d in train_datasets:
                 if d in configs[exp]['train_datasets']:
                     summary.append('yes')
                 else:
-                    summary.append('no')
+                    summary.append('-')
 
             summary.append(epoch)
             for d in eval_datasets:
                 if d in configs[exp]['eval_datasets']:
                     summary.append(results[(exp, epoch)][d])
                 else:
-                    summary.append('-')
+                    summary.append(-1)
 
             f.write('\t'.join([str(v) for v in summary]))
             f.write('\n')
