@@ -4,11 +4,14 @@ import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 import pandas as pd
-
+import spacy
+import dateparser
 from src.utils import delete_dir
 
 max_source_length = 512
 max_target_length = 128
+
+nlp = spacy.load('en_core_web_trf')
 
 
 class UnifiedQATrainer:
@@ -108,8 +111,26 @@ class UnifiedQATrainer:
         return correct, fn, fp, tn, tp
 
     def evaluate_helper_marriages(self, batch, correct, fn, fp, predictions, tn, tp):
-        correct += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred])
-        tp += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred != '<no answer>'])
+        for ques, pred in zip(batch, predictions):
+            precision = ques['precision']
+            actual = ques['output']
+            if precision == '11':
+                requires = ['year', 'month', 'day']
+            elif precision == '10':
+                requires = ['year', 'month']
+            elif precision == '9':
+                requires = ['year']
+            actual_parsed = self.parse_date(actual, nlp, requires=requires)
+            if len(actual_parsed) > 0:
+                actual_parsed = actual_parsed[0]
+            pred_parsed = self.parse_date(pred, nlp, requires=requires)
+            if len(pred_parsed) > 0:
+                pred_parsed = pred_parsed[0]
+            if actual_parsed == pred_parsed:
+                correct += 1
+                tp += 1
+        # correct += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred])
+        # tp += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred != '<no answer>'])
         tn += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred == '<no answer>'])
         fp += len([1 for actual, pred, in zip(batch['output'], predictions)
                    if actual == '<no answer>' and pred != '<no answer>'])
@@ -117,3 +138,19 @@ class UnifiedQATrainer:
             [1 for actual, pred, in zip(batch['output'], predictions) if
              actual != '<no answer>' and pred == '<no answer>'])
         return correct, fn, fp, tn, tp
+
+    def parse_date(str_with_date: str, nlp: spacy.lang.en.English, requires=['year', 'month']):
+        spacy_docs = nlp(str_with_date)
+        spacy_dates = [x for x in spacy_docs.ents if x.label_ == 'DATE']
+        parsed_dates = []
+        if spacy_dates:
+            for sd in spacy_dates:
+                parsed_date = dateparser.parse(sd.text, settings={'PREFER_DAY_OF_MONTH': 'first',
+                                                                  'REQUIRE_PARTS': requires})
+                if parsed_date:
+                    parsed_dates.append({'date': f'{parsed_date.year}-{parsed_date.month:0>2}-{parsed_date.day:0>2}',
+                                         'year': parsed_date.year,
+                                         'month': f'{parsed_date.month:0>2}',
+                                         'day': f'{parsed_date.day:0>2}',
+                                         'orig_date': sd.text})
+        return parsed_dates
