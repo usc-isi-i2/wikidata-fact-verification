@@ -40,10 +40,11 @@ if __name__ == '__main__':
     model = T5ForConditionalGeneration.from_pretrained(model_name)
     if n_gpu > 1:
         model = torch.nn.DataParallel(model)
+        torch.cuda.manual_seed_all(42)
     if n_gpu > 0:
         model.to(torch.device("cuda"))
     if n_gpu == 0:
-        model.to("cpu")
+        model.to(torch.device("cpu"))
 
     train_datasets = {}
     for dataset in configs['train_datasets']:
