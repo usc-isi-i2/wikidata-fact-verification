@@ -111,24 +111,25 @@ class UnifiedQATrainer:
         return correct, fn, fp, tn, tp
 
     def evaluate_helper_marriages(self, batch, correct, fn, fp, predictions, tn, tp):
-        for ques, pred in zip(batch, predictions):
-            precision = ques['precision']
-            actual = ques['output']
-            if precision == '11':
-                requires = ['year', 'month', 'day']
-            elif precision == '10':
-                requires = ['year', 'month']
-            elif precision == '9':
-                requires = ['year']
-            actual_parsed = self.parse_date(actual, nlp, requires=requires)
-            if len(actual_parsed) > 0:
-                actual_parsed = actual_parsed[0]
-            pred_parsed = self.parse_date(pred, nlp, requires=requires)
-            if len(pred_parsed) > 0:
-                pred_parsed = pred_parsed[0]
-            if actual_parsed == pred_parsed:
+        for actual, precision, pred in zip(batch['output'], batch['precision'], predictions):
+            if actual == '<no answer>' and pred in ('<no answer>', 'no answer>'):
                 correct += 1
-                tp += 1
+            else:
+                if precision == '11':
+                    requires = ['year', 'month', 'day']
+                elif precision == '10':
+                    requires = ['year', 'month']
+                elif precision == '9':
+                    requires = ['year']
+                actual_parsed = UnifiedQATrainer.parse_date(actual, nlp, requires)
+                if len(actual_parsed) > 0:
+                    actual_parsed = actual_parsed[0]
+                pred_parsed = UnifiedQATrainer.parse_date(pred, nlp, requires)
+                if len(pred_parsed) > 0:
+                    pred_parsed = pred_parsed[0]
+                if actual_parsed == pred_parsed and actual_parsed is not None and pred_parsed is not None:
+                    correct += 1
+                    tp += 1
         # correct += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred])
         # tp += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred != '<no answer>'])
         tn += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred == '<no answer>'])
@@ -139,7 +140,8 @@ class UnifiedQATrainer:
              actual != '<no answer>' and pred == '<no answer>'])
         return correct, fn, fp, tn, tp
 
-    def parse_date(str_with_date: str, nlp: spacy.lang.en.English, requires=['year', 'month']):
+    @staticmethod
+    def parse_date(str_with_date: str, nlp: spacy.lang.en.English, requires):
         spacy_docs = nlp(str_with_date)
         spacy_dates = [x for x in spacy_docs.ents if x.label_ == 'DATE']
         parsed_dates = []
