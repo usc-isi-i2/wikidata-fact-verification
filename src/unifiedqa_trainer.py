@@ -15,7 +15,7 @@ nlp = spacy.load('en_core_web_trf')
 
 
 class UnifiedQATrainer:
-    def __init__(self, run_files, model, tokenizer, optimizer, lr_schedular, device, eval_batch_size):
+    def __init__(self, run_files, model, tokenizer, optimizer, lr_schedular, device, eval_batch_size, n_gpu=0):
         self.run_files = run_files
         self.model = model
         self.tokenizer = tokenizer
@@ -24,9 +24,20 @@ class UnifiedQATrainer:
         self.lr_schedular = lr_schedular
         self.device = device
         self.best_score = defaultdict(lambda: 0)
+        self.n_gpu = n_gpu
 
     def train(self, dataloader, epoch):
+
+        def convert_to_single_gpu(state_dict):
+            def _convert(key):
+                if key.startswith('module.'):
+                    return key[7:]
+                return key
+
+            return {_convert(key): value for key, value in state_dict.items()}
+
         total_loss = 0
+        train_losses = []
         print(f'Starting training: epoch {epoch}')
         for batch in tqdm(dataloader):
             encoding = self.tokenizer(batch['input'], padding="longest", max_length=max_source_length, truncation=True,
@@ -42,6 +53,10 @@ class UnifiedQATrainer:
 
             loss = self.model(input_ids=input_ids.to(self.device), attention_mask=attention_mask.to(self.device),
                               labels=labels.to(self.device)).loss
+            if self.n_gpu > 1:
+                loss = loss.mean()
+
+            train_losses.append(loss.detach().cpu())
             loss.backward()
             total_loss += loss.item()
 
@@ -62,7 +77,7 @@ class UnifiedQATrainer:
                                       return_tensors="pt")
             input_ids, attention_mask = encoding.input_ids, encoding.attention_mask
 
-            res = self.model.generate(input_ids.to(self.device))
+            res = self.model.module.generate(input_ids.to(self.device))
             predictions = self.tokenizer.batch_decode(res, skip_special_tokens=True)
 
             if 'marriages' in dataset_name:
