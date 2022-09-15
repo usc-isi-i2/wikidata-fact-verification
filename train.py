@@ -19,6 +19,7 @@ if __name__ == '__main__':
                         help='Experiment to run from experiments/config/exp_<experiment.json')
     parser.add_argument('--evaluate-date', type=bool, default=False, action='store_true', dest='evaluate_date',
                         help='run evaluation on model predictions as date')
+    parser.add_argument('--save-dir', type=str, default='./run_files', action='store', dest='save_dir')
     args = parser.parse_args()
 
     with open(os.path.join('experiments/configs', f'exp_{args.experiment}.json')) as f:
@@ -26,7 +27,7 @@ if __name__ == '__main__':
 
     model_size = configs['model']['size']
 
-    run_files = './run_files'
+    run_files = args.save_dir
     prepare_run_files_directory(run_files)
 
     logfile = os.path.join(f'experiments/logs/exp_{args.experiment}.tsv')
