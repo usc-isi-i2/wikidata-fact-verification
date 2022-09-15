@@ -17,6 +17,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train T5 unifiedQA model')
     parser.add_argument('--experiment', type=str, default='check',
                         help='Experiment to run from experiments/config/exp_<experiment.json')
+    parser.add_argument('--evaluate-date', type=bool, default=False, action='store_true', dest='evaluate_date',
+                        help='run evaluation on model predictions as date')
     args = parser.parse_args()
 
     with open(os.path.join('experiments/configs', f'exp_{args.experiment}.json')) as f:
@@ -81,7 +83,7 @@ if __name__ == '__main__':
 
     print(f'Pre fine-tuning evaluations:')
     for dataset_name, dataset in eval_datasets.items():
-        trainer.evaluate(-1, dataset_name, dataset, logfile)
+        trainer.evaluate(-1, dataset_name, dataset, logfile, evaluate_dates=args.evaluate_date)
         print('-' * 10)
 
     for epoch in range(configs['epochs']):
@@ -90,5 +92,5 @@ if __name__ == '__main__':
         # trainer.train(train_datasets['train'], epoch)
         print('-' * 10)
         for dataset_name, dataset in eval_datasets.items():
-            trainer.evaluate(epoch, dataset_name, dataset, logfile)
+            trainer.evaluate(epoch, dataset_name, dataset, logfile, evaluate_dates=args.evaluate_date)
             print('-' * 10)
