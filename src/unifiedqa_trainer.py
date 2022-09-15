@@ -149,7 +149,7 @@ class UnifiedQATrainer:
                                                             ['year'])  # parse with most lenient granularity
                 if len(actual_parsed) > 0:
                     actual_parsed = actual_parsed[0]
-                pred_parsed = UnifiedQATrainer.parse_date(pred, nlp, requires)
+                pred_parsed = UnifiedQATrainer.parse_date(pred, nlp, ['year'])
                 if len(pred_parsed) > 0:
                     pred_parsed = pred_parsed[0]
                 if actual_parsed == pred_parsed and actual_parsed is not None and pred_parsed is not None:
