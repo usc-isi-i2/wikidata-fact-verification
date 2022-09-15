@@ -55,7 +55,7 @@ class UnifiedQATrainer:
                               labels=labels.to(self.device)).loss
             if self.n_gpu > 1:
                 loss = loss.mean()
-#                 print(f"LOSSSSSS: {loss}")
+            #                 print(f"LOSSSSSS: {loss}")
             train_losses.append(loss.detach().cpu())
             loss.backward()
             total_loss += loss.item()
@@ -145,7 +145,8 @@ class UnifiedQATrainer:
                     requires = ['year', 'month']
                 elif precision == '9':
                     requires = ['year']
-                actual_parsed = UnifiedQATrainer.parse_date(actual, nlp, requires)
+                actual_parsed = UnifiedQATrainer.parse_date(actual, nlp,
+                                                            ['year'])  # parse with most lenient granularity
                 if len(actual_parsed) > 0:
                     actual_parsed = actual_parsed[0]
                 pred_parsed = UnifiedQATrainer.parse_date(pred, nlp, requires)
