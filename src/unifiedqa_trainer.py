@@ -55,7 +55,7 @@ class UnifiedQATrainer:
                               labels=labels.to(self.device)).loss
             if self.n_gpu > 1:
                 loss = loss.mean()
-
+#                 print(f"LOSSSSSS: {loss}")
             train_losses.append(loss.detach().cpu())
             loss.backward()
             total_loss += loss.item()
@@ -66,7 +66,7 @@ class UnifiedQATrainer:
 
         print(f'\nTotal loss: epoch {epoch}: {total_loss}')
 
-    def evaluate(self, epoch, dataset_name, dataset, logfile):
+    def evaluate(self, epoch, dataset_name, dataset, logfile, evaluate_dates=False):
         print(f'Evaluating dataset: {dataset_name}')
         total, correct, tp, tn, fp, fn = len(dataset), 0, 0, 0, 0, 0
 
@@ -80,7 +80,8 @@ class UnifiedQATrainer:
             res = self.model.module.generate(input_ids.to(self.device))
             predictions = self.tokenizer.batch_decode(res, skip_special_tokens=True)
 
-            if 'marriages' in dataset_name:
+            # if 'marriages' in dataset_name:
+            if evaluate_dates:
                 correct, fn, fp, tn, tp = self.evaluate_helper_marriages(batch, correct, fn, fp, predictions, tn, tp)
             else:
                 correct, fn, fp, tn, tp = self.evaluate_helper(batch, correct, fn, fp, predictions, tn, tp)
@@ -112,7 +113,10 @@ class UnifiedQATrainer:
             self.best_score[dataset_name] = f1
             delete_dir(save_path)
             print(f'Saving best model on {dataset_name} at epoch {epoch} with F1: {f1}')
-            self.model.save_pretrained(save_path)
+            if self.n_gpu > 1:
+                self.model.module.save_pretrained(save_path)
+            else:
+                self.model.save_pretrained(save_path)
             with open(f'{save_path}/score.txt', 'w') as f:
                 f.write(f'Epoch: {epoch}\n')
                 f.write(score_string)
@@ -127,8 +131,10 @@ class UnifiedQATrainer:
 
     def evaluate_helper_marriages(self, batch, correct, fn, fp, predictions, tn, tp):
         for actual, precision, pred in zip(batch['output'], batch['precision'], predictions):
+            precision = str(precision)
             if actual == '<no answer>' and pred in ('<no answer>', 'no answer>'):
                 correct += 1
+                tn += 1
             else:
                 if precision == '11':
                     requires = ['year', 'month', 'day']
@@ -147,12 +153,12 @@ class UnifiedQATrainer:
                     tp += 1
         # correct += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred])
         # tp += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred != '<no answer>'])
-        tn += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred == '<no answer>'])
+        # tn += len([1 for actual, pred, in zip(batch['output'], predictions) if actual == pred == '<no answer>'])
         fp += len([1 for actual, pred, in zip(batch['output'], predictions)
-                   if actual == '<no answer>' and pred != '<no answer>'])
+                   if actual == '<no answer>' and pred not in ('<no answer>', 'no answer>')])
         fn += len(
             [1 for actual, pred, in zip(batch['output'], predictions) if
-             actual != '<no answer>' and pred == '<no answer>'])
+             actual != '<no answer>' and pred in ('<no answer>', 'no answer>')])
         return correct, fn, fp, tn, tp
 
     @staticmethod

@@ -32,8 +32,10 @@ if __name__ == '__main__':
     # accelerator = Accelerator()
     # device = accelerator.device
     n_gpu = torch.cuda.device_count()
-    device = 'cuda' if n_gpu > 0 else 'cpu'
+    device = torch.device('cuda' if n_gpu > 0 else 'cpu')
     print(f'Running on device: {device}')
+    if n_gpu > 0:
+        print(f'Number of GPUs: {n_gpu}')
 
     model_name = f'allenai/unifiedqa-v2-t5-{model_size}-1251000'
     tokenizer = T5Tokenizer.from_pretrained(model_name)
@@ -63,7 +65,7 @@ if __name__ == '__main__':
     lr_scheduler = AdafactorSchedule(optimizer)
 
     trainer = UnifiedQATrainer(run_files, model, tokenizer, optimizer, lr_scheduler, device,
-                               eval_batch_size=configs['eval_batch_size'])
+                               eval_batch_size=configs['eval_batch_size'], n_gpu=n_gpu)
     config_string = f'Run configs from experiments/configs/exp_{args.experiment}.json: {configs}'
 
     with open(logfile, 'w') as f:
