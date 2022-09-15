@@ -15,11 +15,19 @@ from src.utils import prepare_run_files_directory
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train T5 unifiedQA model')
-    parser.add_argument('--experiment', type=str, default='check',
+    parser.add_argument('--experiment',
+                        type=str,
+                        default='check',
                         help='Experiment to run from experiments/config/exp_<experiment.json')
-    parser.add_argument('--evaluate-date', type=bool, default=False, action='store_true', dest='evaluate_date',
+    parser.add_argument('--evaluate-date',
+                        default=False,
+                        action='store_true', dest='evaluate_date',
                         help='run evaluation on model predictions as date')
-    parser.add_argument('--save-dir', type=str, default='./run_files', action='store', dest='save_dir')
+    parser.add_argument('--save-dir',
+                        type=str,
+                        default='./run_files',
+                        action='store',
+                        dest='save_dir')
     args = parser.parse_args()
 
     with open(os.path.join('experiments/configs', f'exp_{args.experiment}.json')) as f:
