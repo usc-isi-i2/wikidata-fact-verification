@@ -31,11 +31,17 @@ def get_marriages_dataset(dataset_name):
     return MarriagesWikidataDataset(train_file)
 
 
+def get_position_held_dataset(dataset_name):
+    train_file = f'data/position/{dataset_name}.json'
+    return MarriagesWikidataDataset(train_file)
+
+
 get_dataset_functions = {
     "unifiedQA": get_unified_qa_dataset,
     "tacred": get_tacred_dataset,
     "anchor": get_anchors_dataset,
     "tacred_combined": get_tacred_combined_dataset,
     "tacred_empty": get_tacred_empty_dataset,
-    "marriages": get_marriages_dataset
+    "marriages": get_marriages_dataset,
+    "position": get_position_held_dataset
 }
