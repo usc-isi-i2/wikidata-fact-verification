@@ -77,7 +77,10 @@ class UnifiedQATrainer:
                                       return_tensors="pt")
             input_ids, attention_mask = encoding.input_ids, encoding.attention_mask
 
-            res = self.model.module.generate(input_ids.to(self.device))
+            if self.n_gpu > 1:
+                res = self.model.module.generate(input_ids.to(self.device))
+            else:
+                res = self.model.generate(input_ids.to(self.device))
             predictions = self.tokenizer.batch_decode(res, skip_special_tokens=True)
 
             # if 'marriages' in dataset_name:
