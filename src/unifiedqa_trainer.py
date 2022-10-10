@@ -55,7 +55,7 @@ class UnifiedQATrainer:
                               labels=labels.to(self.device)).loss
             if self.n_gpu > 1:
                 loss = loss.mean()
-            #                 print(f"LOSSSSSS: {loss}")
+
             train_losses.append(loss.detach().cpu())
             loss.backward()
             total_loss += loss.item()
@@ -108,14 +108,14 @@ class UnifiedQATrainer:
         results_df.to_csv(
             f'{self.run_files}/predictions_{dataset_name}_{"pretrained" if epoch == -1 else epoch}.csv', index=False)
         if epoch == -1 or 'train' in dataset_name:
-            self.best_score[dataset_name] = f1
+            self.best_score[dataset_name] = accuracy
             return
 
-        if f1 > self.best_score[dataset_name]:
-            save_path = f'{self.run_files}/fine_tuned_model_{dataset_name}'
-            self.best_score[dataset_name] = f1
+        if accuracy > self.best_score[dataset_name] or True:
+            save_path = f'{self.run_files}/fine_tuned_model_{dataset_name}_{epoch}'
+            self.best_score[dataset_name] = accuracy
             delete_dir(save_path)
-            print(f'Saving best model on {dataset_name} at epoch {epoch} with F1: {f1}')
+            print(f'Saving best model on {dataset_name} at epoch {epoch} with accuracy: {accuracy}')
             if self.n_gpu > 1:
                 self.model.module.save_pretrained(save_path)
             else:
